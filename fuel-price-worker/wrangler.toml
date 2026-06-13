@@ -1,0 +1,9 @@
+name = "fuel-updater"
+main = "src/index.js"
+
+[triggers]
+crons = ["*/30 * * * *"]
+
+[[kv_namespaces]]
+binding= "FUEL_CACHE"
+id = ""
