@@ -35,3 +35,20 @@ footer {
     text-align: center;
     background: #ddd;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 25%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {
+    flex: 75%;
+    background-color: white;
+    padding: 20px;
+}
