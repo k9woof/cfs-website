@@ -27,6 +27,8 @@ async function updatePrice(env) {
             })
         });
 
+        console.log(tokenRes)
+
         // update kv db cache with token
         const tokenData = await tokenRes.json();
         token = tokenData.data.access_token;
