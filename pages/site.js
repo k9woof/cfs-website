@@ -15,8 +15,8 @@ async function getFuelPrice() {
         }
 
         // get prices, update
-        const unleaded = station.fuel_prices[0].price
-        const diesel = station.fuel_prices[1].price 
+        const unleaded = fuel_prices[0].price
+        const diesel = fuel_prices[1].price 
         petrolElement.innerHTML = `${JSON.stringify(unleaded)}`;
         dieselElement.innerHTML = `${JSON.stringify(diesel)}`;
     } catch (err) {
