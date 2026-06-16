@@ -35,7 +35,7 @@ async function updatePrice(env) {
                 expirationTtl: tokenData.data.expires_in - 60
             });
         } catch (err) {
-            console.error("Error getting token", tokenRes.status);
+            console.error("Error getting token", err);
             return;
         }
     }
