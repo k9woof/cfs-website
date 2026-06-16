@@ -42,21 +42,25 @@ async function updatePrice(env) {
 
     // fetch price data
     try {
-        const dataRes = await fetch("https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=10", {
-            headers: { 
-                Authorization: `Bearer ${token}`,
-                "Accept": "application/json", 
-                "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)"
-            }
-        });
-
-        // manipulate response data, and store in kv cache
-        const data = await dataRes.json();
-        const ourPrice = data.find(s => s.node_id === env.STATION_ID);
+        const lastPrice = await env.FUEL_CACHE.get("station-price");
+        let ourPrice = undefined;
+        let batchNumber = 1;
+        while (ourPrice === undefined) {
+            const dataRes = await fetch(`https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=${batchNumber}`, {
+                headers: { 
+                    Authorization: `Bearer ${token}`,
+                    "Accept": "application/json", 
+                    "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)"
+                }
+            });
+            const data = await dataRes.json();
+            ourPrice = data.find(s => s.node_id === env.STATION_ID);
+            batchNumber++;
+        }
         await env.FUEL_CACHE.put("station-price", JSON.stringify(ourPrice));
     } catch (err) {
         console.error("Fuel Price fetch error", err);
         return;
     }
-    console.log(await env.FUEL_CACHE.get("station-price"))
+    console.log(await env.FUEL_CACHE.get("station-price"));
 }
