@@ -7,3 +7,18 @@ crons = ["*/30 * * * *"]
 [[kv_namespaces]]
 binding= "FUEL_CACHE"
 id = "d54570a5973c46da91b9b96338bd2a7b"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
