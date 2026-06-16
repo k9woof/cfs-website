@@ -3,16 +3,13 @@
 export default {
     async scheduled(event, env, ctx) {
         await updatePrice(env);
-    }, async fetch(event, env, ctx) {
-        await updatePrice(env);
-        return new Response("OK");
     }
 };
 
 // update fuel price
 async function updatePrice(env) {
     let token = undefined;
-    
+
     // fetch new token
     try {
         const tokenRes = await fetch ("https://www.fuel-finder.service.gov.uk/api/v1/oauth/generate_access_token", {
