@@ -1,26 +1,27 @@
 // script
 
 async function getFuelPrice() {
-    const list = document.getElementById("fuel-list");
+    const petrolElement = document.getElementById("petrol");
+    const dieselElement = document.getElementById("diesel");
     try {
 
         // fetch fuel price
         const res = await fetch("api/fuel-price");
         const station = await res.json();
         if (!res.ok) {
-            list.textContent = "Prices not available";
+            petrolElement.textContent = "Prices not available";
+            dieselElement.textContent = "Prices not available";
             return;
         }
 
         // get prices, update
         const unleaded = station.fuel_prices[0].price
         const diesel = station.fuel_prices[1].price 
-        list.innerHTML = `
-            <li>Petrol: ${JSON.stringify(unleaded)}</li>
-            <li>Diesel: ${JSON.stringify(diesel)}</li>
-        `;
+        petrolElement.innerHTML = `${JSON.stringify(unleaded)}`;
+        dieselElement.innerHTML = `${JSON.stringify(diesel)}`;
     } catch (err) {
-        list.textContent = "error getting prices";
+        petrolElement.textContent = "Error getting prices";
+        dieselElement.textContent = "Error getting prices"
     }
 }
 

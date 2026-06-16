@@ -52,3 +52,34 @@ footer {
     background-color: white;
     padding: 20px;
 }
+
+.fuel-container {
+    display: flex;
+    background-color: #f1f1f1;
+    flex-wrap: wrap;
+}
+
+.petrol-box {
+    flex: 50%;
+    padding: 20px;
+    font-size: larger;
+}
+
+.diesel-box {
+    flex: 50%;
+    padding: 20px;
+    font-size: larger;
+}
+
+.maps-ev-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map-container {
+    flex: 50%;
+}
+
+.ev-container {
+    flex: 50%;
+}
