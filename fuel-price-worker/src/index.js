@@ -37,7 +37,7 @@ async function updatePrice(env) {
 
     // fetch price data
     const lastCheck = await env.FUEL_CACHE.get("last-price-check");
-    const url = lastCheck ? `https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=1&effective-start-timestamp=${encodeURIComponent(lastCheck)}` : `https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=15`;
+    const url = `https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=10`;
     const dataRes = await fetch(url, {
         headers: { 
             Authorization: `Bearer ${token}`,
@@ -53,10 +53,7 @@ async function updatePrice(env) {
     // manipulate response data, and store in kv cache
     const data = await dataRes.json();
     const ourPrice = data.find(s => s.node_id === env.STATION_ID);
-
-    // update kv cache if updated
-    if (ourPrice) await env.FUEL_CACHE.put("station-price", JSON.stringify(ourPrice));
-    const lastPrice = await env.FUEL_CACHE.get("station-price")
+    await env.FUEL_CACHE.put("station-price", JSON.stringify(ourPrice));
 
     // formatting time to match what is expected 
     function formatTime(date) {
