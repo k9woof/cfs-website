@@ -31,7 +31,7 @@ async function updatePrice(env) {
             // update kv db cache with token
             const tokenData = await tokenRes.json();
             token = tokenData.data.access_token;
-            await env.FUEL_CACHE.put("oauth_token", token, {
+            await env.FUEL_CACHE.put("oauth-token", token, {
                 expirationTtl: tokenData.data.expires_in - 60
             });
         } catch (err) {
@@ -55,7 +55,7 @@ async function updatePrice(env) {
         const ourPrice = data.find(s => s.node_id === env.STATION_ID);
         await env.FUEL_CACHE.put("station-price", JSON.stringify(ourPrice));
     } catch (err) {
-        console.error("Fuel Price fetch error", dataRes.status);
+        console.error("Fuel Price fetch error", err);
         return;
     }
     console.log(await env.FUEL_CACHE.get("station-price"))
