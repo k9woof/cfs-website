@@ -26,6 +26,9 @@ async function updatePrice(env) {
                 scope: "fuelfinder.read"
             })
         });
+        if (!tokenRes.ok) {
+            throw new Error("Token res error", tokenRes.status)
+        }
 
         // update kv db cache with token
         const tokenData = await tokenRes.json();
