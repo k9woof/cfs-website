@@ -6,15 +6,15 @@ async function getFuelPrice() {
 
         // fetch fuel price
         const res = await fetch("api/fuel-price");
-        const station = await res.json();
+        const fuel_prices = await res.json();
         if (!res.ok) {
             list.textContent = "Prices not available";
             return;
         }
 
         // get prices, update
-        const unleaded = station.fuel_prices[0].price
-        const diesel = station.fuel_prices[1].price 
+        const unleaded = fuel_prices[0].price
+        const diesel = fuel_prices[1].price 
         list.innerHTML = `
             <li>Petrol: ${JSON.stringify(unleaded)}</li>
             <li>Diesel: ${JSON.stringify(diesel)}</li>

@@ -42,7 +42,8 @@ async function updatePrice(env) {
 
     // fetch price data
     try {
-        const lastPrice = await env.FUEL_CACHE.get("station-price");
+
+        // try batches until ours is found
         let ourPrice = undefined;
         let batchNumber = 1;
         while (ourPrice === undefined) {
@@ -57,10 +58,12 @@ async function updatePrice(env) {
             ourPrice = data.find(s => s.node_id === env.STATION_ID);
             batchNumber++;
         }
-        await env.FUEL_CACHE.put("station-price", JSON.stringify(ourPrice));
+
+        // update cache with current prices
+        const fuel_price = JSON.stringify(ourPrice.fuel_prices);
+        await env.FUEL_CACHE.put("station-price", fuel_price);
     } catch (err) {
         console.error("Fuel Price fetch error", err);
         return;
     }
-    console.log(await env.FUEL_CACHE.get("station-price"));
 }
