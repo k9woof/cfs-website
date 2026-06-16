@@ -8,17 +8,17 @@ export default {
 
 // update fuel price
 async function updatePrice(env) {
-    let token = await env.FUEL_CACHE.get("oauth-token");
+    let token = undefined;
 
     // fetch new token
-    if (!token) {
+    try {
         const tokenRes = await fetch ("https://www.fuel-finder.service.gov.uk/api/v1/oauth/generate_access_token", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/x-www-form-urlencoded", 
                 "Accept": "application/json", 
                 "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)"
-             }, 
+            }, 
             body: new URLSearchParams ({
                 grant_type: "client_credentials", 
                 client_id: env.FUEL_CLIENT_ID, 
@@ -26,43 +26,45 @@ async function updatePrice(env) {
                 scope: "fuelfinder.read"
             })
         });
+        if (!tokenRes.ok) {
+            throw new Error("Token res error", tokenRes.status)
+        }
 
         // update kv db cache with token
         const tokenData = await tokenRes.json();
         token = tokenData.data.access_token;
-        await env.FUEL_CACHE.put("oauth_token", token, {
-            expirationTtl: tokenData.data.expires_in - 60
-        });
+    } catch (err) {
+        console.error("Error getting token", err);
+        return;
     }
+    
 
     // fetch price data
-    const lastCheck = await env.FUEL_CACHE.get("last-price-check");
-    const url = lastCheck ? `https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=1&effective-start-timestamp=${encodeURIComponent(lastCheck)}` : `https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=15`;
-    const dataRes = await fetch(url, {
-        headers: { 
-            Authorization: `Bearer ${token}`,
-            "Accept": "application/json", 
-            "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)"
+    try {
+
+        // try batches until ours is found
+        let ourPrice = undefined;
+        let batchNumber = 1;
+        while (ourPrice === undefined) {
+            const dataRes = await fetch(`https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=${batchNumber}`, {
+                headers: { 
+                    Authorization: `Bearer ${token}`,
+                    "Accept": "application/json", 
+                    "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)"
+                }
+            });
+            const data = await dataRes.json();
+            ourPrice = data.find(s => s.node_id === env.STATION_ID);
+            batchNumber++;
         }
-    });
-    if (!dataRes.ok) {
-        console.error("fuel price api error", dataRes.status);
+
+        // update cache with current prices
+        const fuel_price = JSON.stringify(ourPrice.fuel_prices);
+        await env.FUEL_CACHE.put("station-price", fuel_price);
+    } catch (err) {
+        console.error("Fuel Price fetch error", err);
         return;
     }
 
-    // manipulate response data, and store in kv cache
-    const data = await dataRes.json();
-    const ourPrice = data.find(s => s.node_id === env.STATION_ID);
-
-    // update kv cache if updated
-    if (ourPrice) await env.FUEL_CACHE.put("station-price", JSON.stringify(ourPrice));
-    const lastPrice = await env.FUEL_CACHE.get("station-price")
-
-    // formatting time to match what is expected 
-    function formatTime(date) {
-        const pad = n => String(n).padStart(2, "0");
-        return `${date.getUTCFullYear()}-${pad(date.getUTCMonth() + 1)}-${pad(date.getUTCDate())} ${pad(date.getUTCHours())}:${pad(date.getUTCMinutes())}:${pad(date.getUTCSeconds())}`;
-    }
-    const now = formatTime(new Date());
-    await env.FUEL_CACHE.put("last-price-check", now);
+    console.log(await env.FUEL_CACHE.get("station-price"))
 }

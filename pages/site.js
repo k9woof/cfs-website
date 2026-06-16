@@ -7,7 +7,7 @@ async function getFuelPrice() {
 
         // fetch fuel price
         const res = await fetch("api/fuel-price");
-        const station = await res.json();
+        const fuel_prices = await res.json();
         if (!res.ok) {
             petrolElement.textContent = "Prices not available";
             dieselElement.textContent = "Prices not available";
