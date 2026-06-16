@@ -3,10 +3,6 @@
 export default {
     async scheduled(event, env, ctx) {
         await updatePrice(env);
-    }, 
-    async fetch(request, env) {
-        await updatePrice(env);
-        return new Response("OK");
     }
 };
 
