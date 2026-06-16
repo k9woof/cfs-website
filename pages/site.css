@@ -85,3 +85,11 @@ footer {
 .ev-container {
     flex: 50%;
 }
+
+.fakeimg {
+    background: grey;
+    color: white;
+    padding: 10px;
+    height: 300px;
+    width: 575px;
+}
