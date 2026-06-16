@@ -3,10 +3,9 @@
 }
 
 header {
-    background: white;
+    background: beige;
     padding: 20px;
     text-align: left;
-    background: aquamarine;
 }
 body {
     background: white;
@@ -55,20 +54,23 @@ footer {
 
 .fuel-container {
     display: flex;
-    background-color: #f1f1f1;
     flex-wrap: wrap;
 }
 
 .petrol-box {
-    flex: 50%;
+    flex: 40%;
     padding: 20px;
     font-size: larger;
+    background-color: #f1f1f1;
+    margin: 10px;
 }
 
 .diesel-box {
-    flex: 50%;
+    flex: 40%;
     padding: 20px;
     font-size: larger;
+    background-color: #f1f1f1;
+    margin: 10px;
 }
 
 .maps-ev-container {
