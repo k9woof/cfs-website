@@ -2,9 +2,6 @@ name = "fuel-updater"
 main = "src/index.js"
 compatibility_date = "2026-06-13"
 
-[triggers]
-crons = ["*/5 * * * *"]
-
 [[kv_namespaces]]
 binding= "FUEL_CACHE"
 id = "d54570a5973c46da91b9b96338bd2a7b"

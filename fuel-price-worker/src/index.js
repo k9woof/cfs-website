@@ -65,6 +65,4 @@ async function updatePrice(env) {
         console.error("Fuel Price fetch error", err);
         return;
     }
-
-    console.log(await env.FUEL_CACHE.get("station-price"))
 }

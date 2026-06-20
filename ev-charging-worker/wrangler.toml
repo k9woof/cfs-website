@@ -1,0 +1,22 @@
+name = "ev-updater"
+main = "src/index.js"
+compatibility_date = "2026-06-19"
+
+[[kv_namespaces]]
+binding= "EV-CACHE"
+id = "adc6d8fc6b7e4dd99b5694c6630d8c5c"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
