@@ -9,8 +9,8 @@ export async function onRequestGet(context) {
             headers: { "Content-Type": "application/json" }
         });
     }
-
-    return new Response([JSON.stringify(cached), JSON.stringify(cached_tarriff)], {
+    const bodyRes =  [JSON.stringify(cached) , JSON.stringify(cached_tarriff)]
+    return new Response(bodyRes, {
         headers: {
             "Content-Type": "application/json", 
             "Cache-Control": "public, max-age=300"

@@ -38,7 +38,7 @@ async function getEVAvailabilityTarriff() {
             return;
         }
         const tarriffAvailability = await res.json();
-        const tarriff = tarriffAvailability[1];
+        const tarriff = tarriffAvailability[1].price;
         const availability = tarriffAvailability[0];
     } catch(err) {
         tarriffElement.textContent = "Error getting tarriff data";
