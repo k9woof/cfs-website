@@ -10,7 +10,7 @@ export async function onRequestGet(context) {
         });
     }
 
-    return new Response((JSON.stringify(cached), JSON.stringify(cached_tarriff)), {
+    return new Response([JSON.stringify(cached), JSON.stringify(cached_tarriff)], {
         headers: {
             "Content-Type": "application/json", 
             "Cache-Control": "public, max-age=300"
