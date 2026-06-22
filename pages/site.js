@@ -41,7 +41,7 @@ async function getEVAvailabilityTarriff() {
         const tarriff = tarriffAvailability[1].price_components.price;
         const availability = tarriffAvailability[0];
         tarriffElement.innerHTML = `£${JSON.stringify(tarriff)} per kwh`;
-        availabilityElement.innerHTML = 
+        //availabilityElement.innerHTML = 
     } catch(err) {
         tarriffElement.textContent = "Error getting tarriff data";
         availabilityElement.textContent = "Error getting availability data";
