@@ -4,3 +4,7 @@ pages_build_output_dir = "."
 [[kv_namespaces]]
 binding= "FUEL_CACHE"
 id = "d54570a5973c46da91b9b96338bd2a7b"
+
+[[kv_namespaces]]
+binding= "EV_CACHE"
+id = "adc6d8fc6b7e4dd99b5694c6630d8c5c"
