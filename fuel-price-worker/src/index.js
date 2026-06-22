@@ -3,14 +3,15 @@
 export default {
     async scheduled(event, env, ctx) {
         await updatePrice(env);
+    }, async fetch(event, env, ctx) {
+        await updatePrice(env);
     }
 };
 
 // update fuel price
 async function updatePrice(env) {
-    let token = undefined;
 
-    // fetch new token
+    // token
     try {
         const tokenRes = await fetch ("https://www.fuel-finder.service.gov.uk/api/v1/oauth/generate_access_token", {
             method: "POST",
@@ -26,25 +27,14 @@ async function updatePrice(env) {
                 scope: "fuelfinder.read"
             })
         });
-        if (!tokenRes.ok) {
-            throw new Error("Token res error", tokenRes.status)
-        }
-
-        // update kv db cache with token
+        if (!tokenRes.ok) throw new Error(`Token fetch error: ${tokenRes.text()}`)
         const tokenData = await tokenRes.json();
-        token = tokenData.data.access_token;
-    } catch (err) {
-        console.error("Error getting token", err);
-        return;
-    }
-    
+        const token = tokenData.data.access_token;
 
-    // fetch price data
-    try {
-
-        // try batches until ours is found
+        // fuel price
         let ourPrice = undefined;
         let batchNumber = 1;
+        const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
         while (ourPrice === undefined) {
             const dataRes = await fetch(`https://www.fuel-finder.service.gov.uk/api/v1/pfs/fuel-prices?batch-number=${batchNumber}`, {
                 headers: { 
@@ -53,8 +43,10 @@ async function updatePrice(env) {
                     "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)"
                 }
             });
+            if (!dataRes.ok) throw new Error(`Data fetch error: ${dataRes.text()}`)
             const data = await dataRes.json();
             ourPrice = data.find(s => s.node_id === env.STATION_ID);
+            await delay(1500);
             batchNumber++;
         }
 
@@ -62,7 +54,7 @@ async function updatePrice(env) {
         const fuel_price = JSON.stringify(ourPrice.fuel_prices);
         await env.FUEL_CACHE.put("station-price", fuel_price);
     } catch (err) {
-        console.error("Fuel Price fetch error", err);
+        console.error("Fuel Price/Token fetch error", err);
         return;
     }
 }
