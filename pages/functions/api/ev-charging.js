@@ -9,7 +9,7 @@ export async function onRequestGet(context) {
             headers: { "Content-Type": "application/json" }
         });
     }
-    const bodyRes =  [JSON.stringify(cached) , JSON.stringify(cached_tarriff)]
+    const bodyRes =  JSON.stringify([cached , cached_tarriff]);
     return new Response(bodyRes, {
         headers: {
             "Content-Type": "application/json", 
