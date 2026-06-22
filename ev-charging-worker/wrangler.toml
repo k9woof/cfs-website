@@ -1,10 +1,10 @@
-name = "fuel-updater"
+name = "ev-updater"
 main = "src/index.js"
-compatibility_date = "2026-06-13"
+compatibility_date = "2026-06-19"
 
 [[kv_namespaces]]
-binding= "FUEL_CACHE"
-id = "d54570a5973c46da91b9b96338bd2a7b"
+binding= "EV-CACHE"
+id = "adc6d8fc6b7e4dd99b5694c6630d8c5c"
 
 [observability]
 enabled = false
