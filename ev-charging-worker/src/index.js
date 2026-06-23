@@ -12,7 +12,10 @@ async function updateAvailabilityAndPrice(env) {
 
         // availability
         const avilabilityRes = await fetch ("https://info.smartcharging.uk/public_feed/locations/3666", {
-            "Accept": "application/json"
+            headers: { 
+                "Accept": "application/json", 
+                "User-Agent": "Mozilla/5.0 (compatible; EVWorker/1.0)"
+            }
         });
         if (!avilabilityRes.ok) throw new Error(`availability fetch error: ${avilabilityRes.text()}`)
         const availabilityData = await avilabilityRes.json();
@@ -22,7 +25,10 @@ async function updateAvailabilityAndPrice(env) {
 
         // tarriff
         const tarriffRes = await fetch ("https://info.smartcharging.uk/public_feed/locations/3666/tariffs", {
-            "Accept": "application/json"
+            headers: { 
+                "Accept": "application/json", 
+                "User-Agent": "Mozilla/5.0 (compatible; EVWorker/1.0)"
+            }
         });
         if (!tarriffRes.ok) throw new Error(`price fetch error: ${tarriffRes.text()}`)
         const tarrifData = await tarriffRes.json();
