@@ -105,3 +105,16 @@ footer {
     padding: 20px;
     font-size: larger;
 }
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.facebook {
+    flex: 50%;
+}
+
+.instagram {
+    flex: 50%;
+}

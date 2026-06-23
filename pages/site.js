@@ -38,7 +38,7 @@ async function getEVAvailabilityTarriff() {
             return;
         }
         const tarriffAvailability = await res.json();
-        const tarriff = tarriffAvailability[1].price_components[0].price;
+        const tarriff = tarriffAvailability[1][0].price_components[0].price;
         const availability = tarriffAvailability[0];
         tarriffElement.innerHTML = `£${JSON.stringify(tarriff)} per kwh`;
         //availabilityElement.innerHTML = 
