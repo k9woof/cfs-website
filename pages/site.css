@@ -108,13 +108,17 @@ footer {
 
 .social-icons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .facebook {
-    flex: 50%;
+    flex: auto;
 }
 
 .instagram {
-    flex: 50%;
+    flex: auto;
+}
+
+.linkedin {
+    flex: auto;
 }
