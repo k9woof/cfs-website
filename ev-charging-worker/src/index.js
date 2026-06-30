@@ -1,43 +1,90 @@
 // worker to fetch latest ev availability from the smartcharging public api
 
 export default {
-    async scheduled(event, env, ctx) {
-        await updateAvailabilityAndPrice(env);
-    }
+  async fetch(event, env, ctx) {
+    await updateAvailabilityAndPrice(env);
+    return new Response("OK");
+  },
 };
 
 // update ev availability and current price
 async function updateAvailabilityAndPrice(env) {
-    try {
-
-        // availability
-        const avilabilityRes = await fetch ("https://info.smartcharging.uk/public_feed/locations/3666", {
-            headers: { 
-                "Accept": "application/json", 
-                "User-Agent": "Mozilla/5.0 (compatible; EVWorker/1.0)"
-            }
-        });
-        if (!avilabilityRes.ok) throw new Error(`availability fetch error: ${avilabilityRes.text()}`)
-        const availabilityData = await avilabilityRes.json();
-        const ourAvailability = availabilityData.data.find(s => s.id === Number(env.SITE_ID));
-        const ourAvailabilityText = JSON.stringify(ourAvailability.evses);
-        await env.EV_CACHE.put("availability-data", ourAvailabilityText);
-
-        // tarriff
-        const tarriffRes = await fetch ("https://info.smartcharging.uk/public_feed/locations/3666/tariffs", {
-            headers: { 
-                "Accept": "application/json", 
-                "User-Agent": "Mozilla/5.0 (compatible; EVWorker/1.0)"
-            }
-        });
-        if (!tarriffRes.ok) throw new Error(`price fetch error: ${tarriffRes.text()}`)
-        const tarrifData = await tarriffRes.json();
-        const ourTarriff = tarrifData.data.find(s => s.id === env.TARRIFF_ID);
-        const ourTarriffText = JSON.stringify(ourTarriff.elements); 
-        await env.EV_CACHE.put("tarriff-data", ourTarriffText);
-        
-    } catch(err) {
-        console.log("EV availability or price fetch error: ", err);
-        return;
+  try {
+    const storedTarriff = await env.EV_CACHE.get("tarriff-data");
+    const storedAvailability = await env.EV_CACHE.get("availability-data");
+    if (storedTarriff === null) {
+      updatePrice(env);
     }
+    if (storedAvailability === null) {
+      updateAvailability(env);
+    }
+  } catch (err) {
+    console.error("EV availability or price fetch error: ", err);
+    return;
+  }
+}
+
+// update availability
+async function updateAvailability(env) {
+  try {
+    const availabilityRes = await fetch(
+      "https://info.smartcharging.uk/public_feed/locations/3666",
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      },
+    );
+
+    // check res
+    if (!avilabilityRes.ok) {
+      throw new Error(`Price fetch error: ${availabilityRes.text()}`);
+    }
+
+    // find our site availability data
+    const availabilityData = await avilabilityRes.json();
+    const ourAvailability = availabilityData.data.find(
+      (s) => s.id === Number(env.SITE_ID),
+    );
+    const ourAvailabilityText = JSON.stringify(ourAvailability.evses);
+
+    // update availability in kv
+    await env.EV_CACHE.put("availability-data", ourAvailabilityText, {
+      expirationTtl: 300,
+    });
+  } catch (err) {
+    console.error("EV Availability fetch error: ", err);
+    return;
+  }
+}
+
+// update price
+async function updatePrice(env) {
+  try {
+    const tarriffRes = await fetch(
+      "https://info.smartcharging.uk/public_feed/locations/3666/tariffs",
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      },
+    );
+
+    // check res
+    if (!tarriffRes.ok)
+      throw new Error(`price fetch error: ${tarriffRes.text()}`);
+
+    // find our price data
+    const tarrifData = await tarriffRes.json();
+    const ourTarriff = tarrifData.data.find((s) => s.id === env.TARRIFF_ID);
+    const ourTarriffText = JSON.stringify(ourTarriff.elements);
+
+    // update price in kv
+    await env.EV_CACHE.put("tarriff-data", ourTarriffText, {
+      expirationTtl: 86400,
+    });
+  } catch (err) {
+    console.error("EV Price fetch error: ", err);
+    return;
+  }
 }
