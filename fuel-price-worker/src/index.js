@@ -7,6 +7,12 @@ export default {
   },
 };
 
+// check if price update needed
+async function checkForPriceUpdate(env) {
+  try {
+  } catch (err) {}
+}
+
 // update fuel price
 async function updatePrice(env) {
   // token

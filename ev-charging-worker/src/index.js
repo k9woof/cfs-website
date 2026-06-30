@@ -13,10 +13,10 @@ async function updateAvailabilityAndPrice(env) {
     const storedTarriff = await env.EV_CACHE.get("tarriff-data");
     const storedAvailability = await env.EV_CACHE.get("availability-data");
     if (storedTarriff === null) {
-      updatePrice(env);
+      await updatePrice(env);
     }
     if (storedAvailability === null) {
-      updateAvailability(env);
+      await updateAvailability(env);
     }
   } catch (err) {
     console.error("EV availability or price fetch error: ", err);
@@ -37,7 +37,7 @@ async function updateAvailability(env) {
     );
 
     // check res
-    if (!avilabilityRes.ok) {
+    if (!availabilityRes.ok) {
       throw new Error(`Price fetch error: ${availabilityRes.text()}`);
     }
 
