@@ -2,7 +2,7 @@
 
 export default {
   async fetch(event, env, ctx) {
-    await updatePrice(env);
+    await checkForPriceUpdate(env);
     return new Response("OK");
   },
 };
@@ -43,7 +43,10 @@ async function updatePrice(env) {
     );
 
     // check res
-    if (!tokenRes.ok) throw new Error(`Token fetch error: ${tokenRes.text()}`);
+    if (!tokenRes.ok) {
+      const tokenText = await dataRes.text();
+      throw new Error(`Data fetch error: ${datatext}`);
+    }
     const tokenData = await tokenRes.json();
     const token = tokenData.data.access_token;
 
@@ -64,7 +67,10 @@ async function updatePrice(env) {
       );
 
       // check res
-      if (!dataRes.ok) throw new Error(`Data fetch error: ${dataRes.text()}`);
+      if (!dataRes.ok) {
+        const dataText = await dataRes.text();
+        throw new Error(`Data fetch error: ${datatext}`);
+      }
       const data = await dataRes.json();
       ourPrice = data.find((s) => s.node_id === env.STATION_ID);
       await delay(1500);
