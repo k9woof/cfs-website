@@ -7,6 +7,19 @@ export default {
   },
 };
 
+// check if price update needed
+async function checkForPriceUpdate(env) {
+  try {
+    const storedPrice = await env.EV_CACHE.get("station-price");
+    if (storedPrice === null) {
+      await updatePrice(env);
+    }
+  } catch (err) {
+    console.error("Fuel Price fetch error: ", err);
+    return;
+  }
+}
+
 // update fuel price
 async function updatePrice(env) {
   // token
@@ -18,7 +31,6 @@ async function updatePrice(env) {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           Accept: "application/json",
-          "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)",
         },
         body: new URLSearchParams({
           grant_type: "client_credentials",
@@ -28,6 +40,8 @@ async function updatePrice(env) {
         }),
       },
     );
+
+    // check res
     if (!tokenRes.ok) throw new Error(`Token fetch error: ${tokenRes.text()}`);
     const tokenData = await tokenRes.json();
     const token = tokenData.data.access_token;
@@ -43,10 +57,11 @@ async function updatePrice(env) {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json",
-            "User-Agent": "Mozilla/5.0 (compatible; FuelPriceWorker/1.0)",
           },
         },
       );
+
+      // check res
       if (!dataRes.ok) throw new Error(`Data fetch error: ${dataRes.text()}`);
       const data = await dataRes.json();
       ourPrice = data.find((s) => s.node_id === env.STATION_ID);
@@ -56,7 +71,9 @@ async function updatePrice(env) {
 
     // update cache with current prices
     const fuel_price = JSON.stringify(ourPrice.fuel_prices);
-    await env.FUEL_CACHE.put("station-price", fuel_price);
+    await env.FUEL_CACHE.put("station-price", fuel_price, {
+      expirationTtl: 21600,
+    });
   } catch (err) {
     console.error("Fuel Price/Token fetch error", err);
     return;
