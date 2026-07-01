@@ -11,22 +11,22 @@ export async function onRequestGet(context) {
       "tarriff-data",
       "json",
     );
-  }
 
-  // no data in cache
-  if (!cached || !cached_tarriff) {
-    return new Response(JSON.stringify({ error: "No data yet " }), {
-      status: 503,
-      headers: { "Content-Type": "application/json" },
+    // no data in cache
+    if (!cached || !cached_tarriff) {
+      return new Response(JSON.stringify({ error: "No data yet " }), {
+        status: 503,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    // return cache data
+    const bodyRes = JSON.stringify([cached, cached_tarriff]);
+    return new Response(bodyRes, {
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=300",
+      },
     });
   }
-
-  // return cache data
-  const bodyRes = JSON.stringify([cached, cached_tarriff]);
-  return new Response(bodyRes, {
-    headers: {
-      "Content-Type": "application/json",
-      "Cache-Control": "public, max-age=300",
-    },
-  });
 }
