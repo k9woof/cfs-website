@@ -39,7 +39,7 @@ async function updateAvailability(env) {
     // check res
     if (!availabilityRes.ok) {
       const errorText = await availabilityRes.text();
-      throw new Error(`Price fetch error: ${errorText}`);
+      throw new Error(`Availability fetch error: ${errorText}`);
     }
 
     // find our site availability data
@@ -73,7 +73,8 @@ async function updatePrice(env) {
 
     // check res
     if (!tarriffRes.ok) {
-      throw new Error(`price fetch error: ${tarriffRes.text()}`);
+      const tarriffText = await tarriffRes.text();
+      throw new Error(`price fetch error: ${tarriffText}`);
     }
     // find our price data
     const tarrifData = await tarriffRes.json();
