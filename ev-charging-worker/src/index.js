@@ -38,11 +38,12 @@ async function updateAvailability(env) {
 
     // check res
     if (!availabilityRes.ok) {
-      throw new Error(`Price fetch error: ${availabilityRes.text()}`);
+      const errorText = await availabilityRes.text();
+      throw new Error(`Price fetch error: ${errorText}`);
     }
 
     // find our site availability data
-    const availabilityData = await avilabilityRes.json();
+    const availabilityData = await availabilityRes.json();
     const ourAvailability = availabilityData.data.find(
       (s) => s.id === Number(env.SITE_ID),
     );
@@ -71,9 +72,9 @@ async function updatePrice(env) {
     );
 
     // check res
-    if (!tarriffRes.ok)
+    if (!tarriffRes.ok) {
       throw new Error(`price fetch error: ${tarriffRes.text()}`);
-
+    }
     // find our price data
     const tarrifData = await tarriffRes.json();
     const ourTarriff = tarrifData.data.find((s) => s.id === env.TARRIFF_ID);
