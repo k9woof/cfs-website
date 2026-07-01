@@ -31,6 +31,7 @@ async function updatePrice(env) {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           Accept: "application/json",
+          "User-Agent": "Mozilla/5.0",
         },
         body: new URLSearchParams({
           grant_type: "client_credentials",
@@ -57,6 +58,7 @@ async function updatePrice(env) {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json",
+            "User-Agent": "Mozilla/5.0",
           },
         },
       );
