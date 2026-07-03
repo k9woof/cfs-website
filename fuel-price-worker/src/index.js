@@ -10,7 +10,7 @@ export default {
 // check if price update needed
 async function checkForPriceUpdate(env) {
   try {
-    const storedPrice = await env.EV_CACHE.get("station-price");
+    const storedPrice = await env.FUEL_CACHE.get("station-price");
     if (storedPrice === null) {
       await updatePrice(env);
     }
