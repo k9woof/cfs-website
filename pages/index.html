@@ -32,9 +32,10 @@
         <div class="filling-station-picture">
           <img
             alt="Craigellachie Filling Station"
-            src="/assets/Craigellachie.jpeg"
+            src="/assets/Craigellachie.jpg"
           />
         </div>
+        <p>We are</p>
         <h3>Opening Hours</h3>
         <ul>
           <li>Monday-Friday: 7am - 7pm</li>
@@ -48,9 +49,19 @@
         </p>
         <h3>Contact Us</h3>
         <p>
-          Our phone number is <a href="tel:01340 483384">01340 483384</a>, and
-          you can contact us via email
-          <a href="mailto:contact@craigellachiefillingstation.co.uk">here</a>.
+          Our phone number is
+          <a
+            title="Phone Number for Craigellachie Filling Station"
+            alt="Contact phone number for Craigellachie Filling Station"
+            href="tel:01340 483384"
+            >01340 483384</a
+          >, and you can contact us via email
+          <a
+            title="Email address for Craigellachie Filling Station"
+            alt="Contact email for Craigellachie Filling Station"
+            href="mailto:contact@craigellachiefillingstation.co.uk"
+            >here</a
+          >.
         </p>
         <p>Find us on:</p>
         <div class="social-icons">
@@ -96,21 +107,32 @@
         </div>
       </div>
       <div class="main">
-        <h2>Fuel Prices</h2>
-        <p>Here are our current fuel prices for your convenience:</p>
-        <div class="fuel-container">
-          <div class="petrol-box">
-            <h3>Unleaded:</h3>
-            <p id="petrol">Loading...</p>
+        <div class="fuel-price-container">
+          <h2>Fuel Prices</h2>
+          <p>Here are our current fuel prices for your convenience:</p>
+          <div class="fuel-container">
+            <div class="petrol-box">
+              <h3>Unleaded:</h3>
+              <p id="petrol">Loading...</p>
+            </div>
+            <div class="diesel-box">
+              <h3>Diesel:</h3>
+              <p id="diesel">Loading...</p>
+            </div>
           </div>
-          <div class="diesel-box">
-            <h3>Diesel:</h3>
-            <p id="diesel">Loading...</p>
-          </div>
+          <p>
+            This data is sourced automatically through the
+            <a
+              title="UK Government Fuel Finder website"
+              alt="Fuel Finder"
+              target="_blank"
+              rel="noopener"
+              href="https://www.gov.uk/government/collections/fuel-finder"
+              >UK Government's Fuel Finder</a
+            >
+            service.
+          </p>
         </div>
-        <p>
-          Data is sourced automatically from the Government's fuel-finder API.
-        </p>
         <div class="maps-ev-container">
           <div class="map-container">
             <h2>Where to find us</h2>
@@ -127,7 +149,10 @@
           </div>
           <div class="ev-container">
             <h2>EV Charging</h2>
-            <p>We have an EV charger onsite.</p>
+            <p>
+              Here is the availability of our EV charger and its tarriff for
+              your convenience:
+            </p>
             <div class="availability-box">
               <h3>Availability:</h3>
               <p id="availability">Loading...</p>
@@ -137,7 +162,7 @@
               <p id="tarriff">Loading...</p>
             </div>
             <p>
-              Data provided by
+              This data is provided by
               <a
                 href="https://chargeplacescotland.org/"
                 title="ChargePlace Scotland website"
