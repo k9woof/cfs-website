@@ -17,8 +17,8 @@ async function getFuelPrice() {
     // get prices, update
     const unleaded = fuel_prices[0].price;
     const diesel = fuel_prices[1].price;
-    petrolElement.innerHTML = `${JSON.stringify(unleaded)}p`;
-    dieselElement.innerHTML = `${JSON.stringify(diesel)}p`;
+    petrolElement.innerHTML = `${JSON.stringify(unleaded)}p per litre`;
+    dieselElement.innerHTML = `${JSON.stringify(diesel)}p per litre`;
   } catch (err) {
     petrolElement.textContent = "Error getting prices";
     dieselElement.textContent = "Error getting prices";
@@ -39,7 +39,7 @@ async function getEVAvailabilityTarriff() {
     const tarriffAvailability = await res.json();
     const tarriff = tarriffAvailability[1][0].price_components[0].price * 1.2;
     const availability = tarriffAvailability[0];
-    tarriffElement.innerHTML = `£${JSON.stringify(tarriff)} per kwh`;
+    tarriffElement.innerHTML = `${JSON.stringify((tarriff.toFixed(2)) * 100)}p per kwh`;
     availabilityElement.innerHTML = `test`;
   } catch (err) {
     tarriffElement.textContent = "Error getting tarriff data";
