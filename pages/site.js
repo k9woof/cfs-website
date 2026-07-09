@@ -27,7 +27,7 @@ async function getFuelPrice() {
 
 // ev tarriff/availability
 async function getEVAvailabilityTarriff() {
-  const tarriffElement = document.getElementById("tarriff");
+  const tarriffElement = document.getElementById("tariff");
   const availabilityElement = document.getElementById("availability");
   try {
     const res = await fetch("api/ev-charging");
