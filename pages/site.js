@@ -38,9 +38,11 @@ async function getEVAvailabilityTarriff() {
     }
     const tarriffAvailability = await res.json();
     const tarriff = tarriffAvailability[1][0].price_components[0].price * 1.2;
-    const availability = tarriffAvailability[0];
-    tarriffElement.innerHTML = `${JSON.stringify(((tarriff) * 100).toFixed(2))}p per kwh`;
-    availabilityElement.innerHTML = `test`;
+    const availability = tarriffAvailability[0][0];
+    const availabilityDC = tarriffAvailability[0][1];
+    const availabilityAC = tarriffAvailability[0][2];
+    tarriffElement.innerHTML = `${JSON.stringify(Math.round((tarriff) * 100))}p per kwh`;
+    availabilityElement.innerHTML = `DC: ${availability.status} <br> CHADEMO: ${availabilityDC.status} <br> AC: ${availabilityAC.status}`;
   } catch (err) {
     tarriffElement.textContent = "Error getting tarriff data";
     availabilityElement.textContent = "Error getting availability data";
