@@ -13,10 +13,10 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   margin: 0;
+  text-align: center;
 }
 
 .content {
@@ -27,7 +27,6 @@ body {
 
 header {
   padding: 20px 40px;
-  text-align: center;
 }
 
 body {
@@ -57,7 +56,6 @@ body {
 
 footer {
   padding: 20px;
-  text-align: center;
   flex-shrink: 0;
 }
 
@@ -77,7 +75,6 @@ footer {
  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   padding: 32px;
   min-width: 280px;
-  text-align: center;
 }
 
 .main {
@@ -89,7 +86,7 @@ footer {
   padding-bottom: 20px;
   border-radius: 12px;
   border: 1px solid #e1e4e8;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .fuel-container {
@@ -97,7 +94,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.petrol-box, .diesel-box, .availability-box, .tariff-box {
+.data-box {
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 8px;
@@ -166,12 +163,4 @@ footer {
   border: 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.fuel-price-container h3, h2, p {
-  text-align: center;
-}
-
-.maps-ev-container h3, h2, p {
-  text-align: center;
 }
