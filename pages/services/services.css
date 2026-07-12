@@ -14,7 +14,12 @@
 }
 
 .content-block {
-    flex: 33%;
+    flex: 25%;
     padding: 12px;
     text-align: center;
+}
+
+.service-picture img {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
