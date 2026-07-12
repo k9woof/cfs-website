@@ -42,7 +42,7 @@ async function getEVAvailabilityTarriff() {
     const availabilityDC = tarriffAvailability[0][1];
     const availabilityAC = tarriffAvailability[0][2];
     tarriffElement.innerHTML = `${JSON.stringify(Math.round((tarriff) * 100))}p per kwh`;
-    availabilityElement.innerHTML = `DC: ${availability.status} <br> CHADEMO: ${availabilityDC.status} <br> AC: ${availabilityAC.status}`;
+    availabilityElement.innerHTML = `DC: ${JSON.stringify(availability.status).toLowerCase()} <br> CHADEMO: ${JSON.stringify(availabilityDC.status).toLowerCase()} <br> AC: ${JSON.stringify(availabilityAC.status).toLowerCase()}`;
   } catch (err) {
     tarriffElement.textContent = "Error getting tarriff data";
     availabilityElement.textContent = "Error getting availability data";
