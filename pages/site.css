@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .side, .main {
-    flex: 100%;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -62,7 +53,7 @@ footer {
 .container {
   display: flex;
   gap: 32px;
-  padding: 32px 40px;
+  padding: 32px 32px;
   max-width: 1850px;
   margin: 0 auto;
 }
@@ -163,4 +154,15 @@ footer {
   border: 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 16px 16px;
+  }
+  .side, .main {
+    flex: 100%;
+    padding: 20px;
+  }
 }

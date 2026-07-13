@@ -1,7 +1,7 @@
 .rows {
-    flex: 100%;
+    display: flex;
     background-color: #ffffff;
-    padding: 40px;
+    padding: 20px;
     height: auto;
     padding-bottom: 20px;
     border-radius: 12px;
@@ -11,15 +11,34 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .content-block {
     flex: 25%;
     padding: 12px;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .service-picture img {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 335px;
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        flex: 100%;
+        padding: 4px;
+        padding-bottom: 10px;
+    }
+    .rows {
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+
+    .service-picture img {
+        max-width: 300px;
+    }
 }
