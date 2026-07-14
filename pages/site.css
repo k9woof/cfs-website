@@ -52,8 +52,8 @@ footer {
 
 .container {
   display: flex;
-  gap: 32px;
-  padding: 32px 32px;
+  gap: 24px;
+  padding: 24px 24px;
   max-width: 1850px;
   margin: 0 auto;
 }
@@ -64,14 +64,14 @@ footer {
   border-radius: 12px;
  border: 1px solid #e1e4e8;
  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  padding: 32px;
+  padding: 24px;
   min-width: 280px;
 }
 
 .main {
   flex: 75%;
   background-color: #ffffff;
-  padding: 40px;
+  padding: 24px;
   min-width: 0;
   height: auto;
   padding-bottom: 20px;
