@@ -1,5 +1,6 @@
 .rows {
     display: flex;
+    flex-wrap: wrap;
     background-color: #ffffff;
     padding: 20px;
     height: auto;
@@ -7,16 +8,12 @@
     border-radius: 12px;
     border: 1px solid #e1e4e8;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 1850px;
 }
 
 .content-block {
     flex: 25%;
-    padding: 12px;
+    padding: 6px;
     text-align: center;
     flex-wrap: wrap;
 }
@@ -37,7 +34,6 @@
         padding: 8px;
         flex-wrap: wrap;
     }
-
     .service-picture img {
         max-width: 300px;
     }
