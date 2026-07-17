@@ -1,15 +1,15 @@
 .vul-reporting {
-    background-color: #ffffff;
-    padding: 20px;
-    height: auto;
-    padding-bottom: 20px;
-    border-radius: 12px;
-    border: 1px solid #e1e4e8;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    max-width: 1850px;
-    text-align: left;
+  background-color: #ffffff;
+  padding: 20px;
+  height: auto;
+  padding-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #e1e4e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  max-width: 1850px;
+  text-align: left;
 }
 
 p.updates {
-    font-style: italic;
+  font-style: italic;
 }
