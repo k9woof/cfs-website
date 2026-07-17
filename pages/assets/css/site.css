@@ -62,10 +62,14 @@ body {
   border-bottom: 3px solid transparent;
 }
 
+a.home {
+  border-bottom: 2px solid grey;
+}
+
 .navbar a:hover {
   background-color: transparent;
   color: black;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid grey;
 }
 
 footer {

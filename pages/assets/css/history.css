@@ -13,3 +13,7 @@
 .section {
   display: flex;
 }
+
+a.history {
+  border-bottom: 2px solid grey;
+}

@@ -24,6 +24,10 @@
   max-width: 335px;
 }
 
+a.services {
+  border-bottom: 2px solid grey;
+}
+
 @media (max-width: 768px) {
   .content-block {
     flex: 100%;
