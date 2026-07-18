@@ -13,3 +13,7 @@
 p.updates {
   font-style: italic;
 }
+
+code {
+  background-color: rgb(238, 238, 238);
+}
