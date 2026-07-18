@@ -22,7 +22,7 @@ const map = new maplibregl.Map({
     }),
   },
   center: pinLocation,
-  zoom: 9,
+  zoom: 11,
 });
 
 map.addControl(new maplibregl.NavigationControl());
