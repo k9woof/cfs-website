@@ -12,7 +12,7 @@ const map = new maplibregl.Map({
     sources: {
       basemap: {
         type: "vector",
-        url: "https://map-tile.craigellachiefillingstation.co.uk/scotland/map.json",
+        url: "https://map-tile.craigellachiefillingstation.co.uk/scotland.json",
         attribution:
           '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
       },
