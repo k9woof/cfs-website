@@ -20,4 +20,4 @@ The EV charger worker fetches from ChargePlace Scotland's public API.
 
 ## Development/How to Access
 
-The website and workers were designed/adapted by Cailan White (@k9woof) on behalf of Craigellachie Filling Station Limited. The website is accessable [here](https://craigellachiefilingstation.co.uk).
+The website and workers were designed/adapted by Cailan White (@k9woof) on behalf of Craigellachie Filling Station Limited. The website is accessable [here](https://craigellachiefillingstation.co.uk).

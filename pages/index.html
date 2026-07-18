@@ -20,6 +20,10 @@
     <meta property="og:type" content="website" />
     <title>Craigellachie Filling Station | Fuel & Convenience Store</title>
     <link rel="stylesheet" href="assets/css/site.css" />
+    <link
+      href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="/assets/logo.png" />
     <link
       rel="preload"
@@ -152,11 +156,7 @@
             <div class="maps-ev-container">
               <div class="map-container">
                 <h2>Where to find us</h2>
-                <iframe
-                  width="425"
-                  height="350"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=-3.186767399311066%2C57.485397820706645%2C-3.1815102696418767%2C57.487188400912565&amp;layer=mapnik&amp;marker=57.48629312178345%2C-3.184138834476471"
-                ></iframe>
+                <div id="map"></div>
                 <br />
 
                 <a
@@ -198,7 +198,13 @@
             </div>
           </div>
         </div>
+        <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+        <script
+          src="https://unpkg.com/@protomaps/basemaps@5/dist/basemaps.js"
+          crossorigin="anonymous"
+        ></script>
         <script src="assets/js/site.js"></script>
+        <script type="module" src="assets/js/map.js"></script>
       </main>
       <footer>
         © 2026 Craigellachie Filling Station Limited, <wbr />All Rights
@@ -206,7 +212,9 @@
         <br />
         Hill Street, Craigellachie, Moray, AB38 9TB <br />
         Registered in Scotland No. 297889. <br />
-        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/privacy-policy">Privacy Policy</a>/<a href="/terms-of-service"
+          >Terms of Service</a
+        >
       </footer>
     </div>
   </body>
