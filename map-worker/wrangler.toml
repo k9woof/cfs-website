@@ -10,5 +10,5 @@ binding = "BUCKET"
 bucket_name = "scotland-map"
 
 [vars]
-ALLOWED_ORIGINS = "https://craigellachiefillingstation.co.uk/"
+ALLOWED_ORIGINS = "https://craigellachiefillingstation.co.uk"
 CACHE_CONTROL = "public, max-age=86400"
