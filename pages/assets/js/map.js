@@ -1,5 +1,5 @@
 // displaying the interactive map
-const pinLocation = [-4.21, 57.47];
+const pinLocation = [-3.184139, 57.486293];
 
 // fetches the basemap from our domain, and then styles it
 const map = new maplibregl.Map({
@@ -14,7 +14,7 @@ const map = new maplibregl.Map({
         type: "vector",
         url: "https://map-tile.craigellachiefillingstation.co.uk/scotland.json",
         attribution:
-          '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
+          '<a href="https://protomaps.com" target="_blank" title="Protomaps website" rel="noopener">Protomaps</a> © <a href="https://openstreetmap.org" target="_blank" title="Open Street Maps website" rel="noopener">OpenStreetMap</a>',
       },
     },
     layers: basemaps.layers("basemap", basemaps.namedFlavor("light"), {
@@ -22,7 +22,7 @@ const map = new maplibregl.Map({
     }),
   },
   center: pinLocation,
-  zoom: 10,
+  zoom: 9,
 });
 
 map.addControl(new maplibregl.NavigationControl());
@@ -30,6 +30,8 @@ map.addControl(new maplibregl.NavigationControl());
 new maplibregl.Marker()
   .setLngLat(pinLocation)
   .setPopup(
-    new maplibregl.Popup().setHTML("<b>Craigellachie Filling Station</b>"),
+    new maplibregl.Popup().setHTML(
+      "<b>Craigellachie Filling Station</b><br><p>Hill Street, Craigellachie,<br> Moray, AB38 9TB</p>",
+    ),
   )
   .addTo(map);
