@@ -1,0 +1,14 @@
+# adapted from https://github.com/protomaps/PMTiles/blob/main/serverless/cloudflare/wrangler.toml.example
+
+name = "map-worker"
+main = "src/index.js"
+compatibility_date = "2026-07-18"
+minify = false
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "scotland-map"
+
+[vars]
+ALLOWED_ORIGINS = "https://craigellachiefillingstation.co.uk/"
+CACHE_CONTROL = "public, max-age=86400"

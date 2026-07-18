@@ -8,12 +8,12 @@
   border-radius: 12px;
   border: 1px solid #e1e4e8;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  max-width: 1850px;
+  max-width: 1650px;
 }
 
 .content-block {
   flex: 25%;
-  padding: 6px;
+  padding: 12px;
   text-align: center;
   flex-wrap: wrap;
 }
@@ -22,6 +22,10 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 335px;
+}
+
+a.services {
+  border-bottom: 2px solid grey;
 }
 
 @media (max-width: 768px) {
