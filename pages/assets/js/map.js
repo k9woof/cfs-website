@@ -1,6 +1,4 @@
 // displaying the interactive map
-
-import { layers } from "https://unpkg.com/protomaps-themes-base@2/dist/index.js";
 const pinLocation = [-4.21, 57.47];
 
 // fetches the basemap from our domain, and then styles it
@@ -15,9 +13,13 @@ const map = new maplibregl.Map({
       basemap: {
         type: "vector",
         url: "https://map-tile.craigellachiefillingstation.co.uk/scotland/map.json",
+        attribution:
+          '<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
       },
     },
-    layers: layers("basemap", "light", { lang: "en" }),
+    layers: basemaps.layers("basemap", basemaps.namedFlavor("light"), {
+      lang: "en",
+    }),
   },
   center: pinLocation,
   zoom: 10,
