@@ -1,7 +1,7 @@
 // displaying the interactive map
-const pinLocation = [-3.184139, 57.486293];
 
-// fetches the basemap from our domain, and then styles it
+// fetches the basemap from our domain, and then places marker at our location
+const pinLocation = [-3.184139, 57.486293];
 const map = new maplibregl.Map({
   container: "map",
   style: {
@@ -24,9 +24,7 @@ const map = new maplibregl.Map({
   center: pinLocation,
   zoom: 11,
 });
-
 map.addControl(new maplibregl.NavigationControl());
-
 new maplibregl.Marker()
   .setLngLat(pinLocation)
   .setPopup(

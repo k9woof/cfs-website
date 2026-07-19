@@ -20,6 +20,9 @@
     <meta property="og:type" content="website" />
     <title>Craigellachie Filling Station | Fuel & Convenience Store</title>
     <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/map.css" />
     <link
       href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"
       rel="stylesheet"
@@ -35,99 +38,18 @@
   </head>
 
   <body>
+    <header>
+      <h1>Craigellachie Filling Station</h1>
+      <div class="navbar">
+        <a class="home" href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/history">History</a>
+      </div>
+    </header>
     <div class="content">
-      <header>
-        <h1>Craigellachie Filling Station</h1>
-        <div class="navbar">
-          <a class="home" href="/">Home</a>
-          <a href="/services">Services</a>
-          <a href="/history">History</a>
-        </div>
-      </header>
       <main class="page-body">
         <div class="container">
-          <div class="side">
-            <h2>About us</h2>
-            <p>
-              Located in the heart of Speyside, we have served both locals and
-              visitors since 2006.
-            </p>
-            <div class="filling-station-picture">
-              <img
-                alt="Craigellachie Filling Station"
-                src="/assets/Craigellachie.jpg"
-              />
-            </div>
-            <h3>Opening Hours</h3>
-            <p>Monday-Friday: 7am - 7pm</p>
-            <p>Saturday: 8am - 7pm</p>
-            <p>Sunday: 9am - 3pm</p>
-            <p>
-              We also have outside payment terminals open after hours. Please
-              check our Facebook feed for information about availability.
-            </p>
-            <h3>Contact Us</h3>
-            <p>
-              Our phone number is
-              <a
-                title="Phone Number for Craigellachie Filling Station"
-                href="tel:01340 483384"
-                >01340 483384</a
-              >
-              or you can
-              <a
-                title="Email address for Craigellachie Filling Station"
-                href="mailto:enquiries@craigellachiefillingstation.co.uk"
-                >email</a
-              >
-              us directly.
-            </p>
-            <p>Find us on:</p>
-            <div class="social-icons">
-              <div class="icon-box">
-                <a
-                  id="facebook-link"
-                  href="https://www.facebook.com/craigellachiefillingstation"
-                  target="_blank"
-                  title="Craigellachie Filling Station on Facebook"
-                  rel="noopener"
-                >
-                  <img
-                    alt="Facebook Logo"
-                    src="/assets/social-icons/Facebook_Logo_Primary.png"
-                  />
-                </a>
-              </div>
-              <div class="icon-box">
-                <a
-                  id="instagram-link"
-                  href="https://www.instagram.com/craigellachiefillingstation1/"
-                  target="_blank"
-                  title="Craigellachie Filling Station on Instagram"
-                  rel="noopener"
-                >
-                  <img
-                    alt="Instagram Logo"
-                    src="/assets/social-icons/Instagram_Glyph_Gradient.png"
-                  />
-                </a>
-              </div>
-              <div class="icon-box">
-                <a
-                  id="linkedin-link"
-                  href="https://www.linkedin.com/company/craigellachie-filling-station-limited/"
-                  target="_blank"
-                  title="Craigellachie Filling Station on LinkedIn"
-                  rel="noopener"
-                >
-                  <img
-                    alt="LinkedIn Logo Logo"
-                    src="/assets/social-icons/LI-In-Bug.png"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
+          <!-- fetched data subsection -->
           <div class="main">
             <div class="fuel-price-container">
               <h2>Fuel Prices</h2>
@@ -139,6 +61,25 @@
                 <div class="data-box">
                   <h3>Diesel</h3>
                   <p id="diesel">Loading...</p>
+                </div>
+              </div>
+              This data is sourced automatically from
+              <a
+                href="https://chargeplacescotland.org/"
+                title="ChargePlace Scotland website"
+                target="_blank"
+                rel="noopener"
+                >ChargePlace Scotland</a
+              >.
+              <div class="ev-container">
+                <h2>EV Charger</h2>
+                <div class="data-box">
+                  <h3>Availability</h3>
+                  <p id="availability">Loading...</p>
+                </div>
+                <div class="data-box">
+                  <h3>Tariff</h3>
+                  <p id="tariff">Loading...</p>
                 </div>
               </div>
 
@@ -153,69 +94,118 @@
               >
               service.
             </div>
-            <div class="maps-ev-container">
-              <div class="map-container">
-                <h2>Where to find us</h2>
-                <div id="map"></div>
-                <br />
-
-                <a
-                  href="https://www.openstreetmap.org/?mlat=57.486293&amp;mlon=-3.184139#map=19/57.486293/-3.184139"
-                  title="View larger Map on Open Street Map"
-                  rel="noopener"
-                  target="_blank"
-                  >View Larger Map</a
-                >
-                /
-                <a
-                  href="https://www.google.com/maps/dir//Craigellachie+Filling+Station+Ltd,+Hill+St,+Craigellachie,+Aberlour+AB38+9TB/@57.4862635,-3.1867997,17z/data=!4m17!1m7!3m6!1s0x4885a44b313b653f:0x993479a922a81bb3!2sCraigellachie+Filling+Station+Ltd!8m2!3d57.4862606!4d-3.1842248!16s%2Fg%2F1tf3b352!4m8!1m0!1m5!1m1!1s0x4885a44b313b653f:0x993479a922a81bb3!2m2!1d-3.1842248!2d57.4862606!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
-                  rel="noopener"
-                  target="_blank"
-                  title="Get Directions for Craigellachie Filling Station on Google Maps"
-                  >Get Directions</a
-                >
-              </div>
-              <div class="ev-container">
-                <h2>EV Charger</h2>
-                <div class="data-box">
-                  <h3>Availability</h3>
-                  <p id="availability">Loading...</p>
-                </div>
-                <div class="data-box">
-                  <h3>Tariff</h3>
-                  <p id="tariff">Loading...</p>
-                </div>
-
-                This data is sourced automatically from
-                <a
-                  href="https://chargeplacescotland.org/"
-                  title="ChargePlace Scotland website"
-                  target="_blank"
-                  rel="noopener"
-                  >ChargePlace Scotland</a
-                >.
-              </div>
-            </div>
           </div>
         </div>
-        <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
-        <script
-          src="https://unpkg.com/@protomaps/basemaps@5/dist/basemaps.js"
-          crossorigin="anonymous"
-        ></script>
-        <script src="assets/js/site.js"></script>
-        <script type="module" src="assets/js/map.js"></script>
       </main>
-      <footer>
-        © 2026 Craigellachie Filling Station Limited, <wbr />All Rights
-        Reserved.
-        <br />
-        Hill Street, Craigellachie, Moray, AB38 9TB <br />
-        Registered in Scotland No. 297889. <br />
-        <a href="/privacy-policy">Privacy Policy</a>/<a href="/terms-of-service"
-          >Terms of Service</a
-        >
-      </footer>
     </div>
+    <!-- map subsection -->
+    <div class="map-container">
+      <h2>Where to find us</h2>
+      <div id="map"></div>
+      <br />
+      <a
+        href="https://www.openstreetmap.org/?mlat=57.486293&amp;mlon=-3.184139#map=19/57.486293/-3.184139"
+        title="View larger Map on Open Street Map"
+        rel="noopener"
+        target="_blank"
+        >View Larger Map</a
+      >
+      /
+      <a
+        href="https://www.google.com/maps/dir//Craigellachie+Filling+Station+Ltd,+Hill+St,+Craigellachie,+Aberlour+AB38+9TB/@57.4862635,-3.1867997,17z/data=!4m17!1m7!3m6!1s0x4885a44b313b653f:0x993479a922a81bb3!2sCraigellachie+Filling+Station+Ltd!8m2!3d57.4862606!4d-3.1842248!16s%2Fg%2F1tf3b352!4m8!1m0!1m5!1m1!1s0x4885a44b313b653f:0x993479a922a81bb3!2m2!1d-3.1842248!2d57.4862606!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
+        rel="noopener"
+        target="_blank"
+        title="Get Directions for Craigellachie Filling Station on Google Maps"
+        >Get Directions</a
+      >
+    </div>
+    <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+    <script
+      src="https://unpkg.com/@protomaps/basemaps@5/dist/basemaps.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/site.js"></script>
+    <script type="module" src="assets/js/map.js"></script>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-top-block">
+          <h1>
+            Craigellachie <br />Filling <br />
+            Station
+          </h1>
+          <p>Find us on:</p>
+          <div class="social-icons">
+            <div class="icon-box">
+              <a
+                id="facebook-link"
+                href="https://www.facebook.com/craigellachiefillingstation"
+                target="_blank"
+                title="Craigellachie Filling Station on Facebook"
+                rel="noopener"
+              >
+                <img
+                  alt="Facebook Logo"
+                  src="/assets/social-icons/Facebook_Logo_Primary.png"
+                />
+              </a>
+            </div>
+            <div class="icon-box">
+              <a
+                id="instagram-link"
+                href="https://www.instagram.com/craigellachiefillingstation1/"
+                target="_blank"
+                title="Craigellachie Filling Station on Instagram"
+                rel="noopener"
+              >
+                <img
+                  alt="Instagram Logo"
+                  src="/assets/social-icons/Instagram_Glyph_Gradient.png"
+                />
+              </a>
+            </div>
+            <div class="icon-box">
+              <a
+                id="linkedin-link"
+                href="https://www.linkedin.com/company/craigellachie-filling-station-limited/"
+                target="_blank"
+                title="Craigellachie Filling Station on LinkedIn"
+                rel="noopener"
+              >
+                <img
+                  alt="LinkedIn Logo Logo"
+                  src="/assets/social-icons/LI-In-Bug.png"
+                />
+              </a>
+            </div>
+          </div>
+          <br />
+          <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+          <br />
+          <a href="/terms-of-service" title="Terms of Service"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="footer-top-block">
+          <h3>Opening Hours</h3>
+          <p>Monday-Friday: 7am - 7pm</p>
+          <p>Saturday: 8am - 7pm</p>
+          <p>Sunday: 9am - 3pm</p>
+          <h3>Location</h3>
+          <address>
+            Craigellachie Filling Station <br />
+            Hill Street <br />
+            Craigellachie <br />
+            Moray <br />
+            AB38 9TB
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Craigellachie Filling Station Limited, All Rights Reserved.
+        <br />
+        Registered in Scotland No. 297889.
+      </div>
+    </footer>
   </body>
 </html>
