@@ -1,0 +1,31 @@
+.main {
+  text-align: left;
+  padding: 24px;
+  font-size: large;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.data-container {
+  display: flex;
+  text-align: center;
+}
+
+.fuel-container,
+.ev-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.data-box {
+  background-color: snow;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  flex: 45%;
+  margin: 12px;
+  font-size: larger;
+  color: #333333;
+  padding-top: 8px;
+}

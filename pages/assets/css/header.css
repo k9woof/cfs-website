@@ -1,11 +1,18 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  z-index: 99999;
+}
+
 header {
   display: flex;
-  padding: 20px 40px;
+  padding: 0 20px;
   font-size: larger;
   color: rgb(117, 117, 70);
   text-align: left;
-  max-width: 1600px;
   margin: 0 auto;
+  max-width: 1600px;
 }
 
 .navbar {
@@ -17,13 +24,14 @@ header {
   color: rgb(117, 117, 70);
   font-weight: 600;
   margin-right: 10px;
+  text-decoration: none;
 }
 
 a.home {
-  border-bottom: 2px solid grey;
+  text-decoration: underline;
 }
 
 .navbar a:hover {
   background-color: transparent;
-  color: black;
+  font-weight: 700;
 }

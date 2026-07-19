@@ -8,6 +8,11 @@ footer {
 
 footer a {
   color: whitesmoke;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 address {
@@ -15,18 +20,19 @@ address {
 }
 
 .footer-top {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.75fr 0.5fr 0.75fr;
   padding: 16px;
   padding-bottom: 16px;
   padding-top: 12px;
-  max-width: none;
   margin: 0 auto;
   max-width: 1600px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .footer-top-block {
-  flex: 50%;
-  flex-direction: column;
+  padding: 24px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
