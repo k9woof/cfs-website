@@ -1,15 +1,18 @@
 .header-container {
   position: sticky;
-  top: 0;
-  background-color: whitesmoke;
-  z-index: 99999;
+  position: -webkit-sticky;
+  background-color: #2f4a3c;
+  margin: 0;
+  padding: 2px 0 0 12px;
+  top: -1px;
+  z-index: 9999;
 }
 
 header {
   display: flex;
   padding: 0 20px;
   font-size: larger;
-  color: rgb(117, 117, 70);
+  color: #f0e9d8;
   text-align: left;
   margin: 0 auto;
   max-width: 1600px;
@@ -21,7 +24,7 @@ header {
 }
 
 .navbar a {
-  color: rgb(117, 117, 70);
+  color: #f0e9d8;
   font-weight: 600;
   margin-right: 10px;
   text-decoration: none;
@@ -32,6 +35,6 @@ a.home {
 }
 
 .navbar a:hover {
-  background-color: transparent;
   font-weight: 700;
+  text-decoration: underline;
 }

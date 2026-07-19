@@ -2,17 +2,16 @@ footer {
   text-align: left;
   font-size: larger;
   margin: 0 auto;
-  background-color: rgb(117, 117, 70);
-  color: antiquewhite;
+  background-color: #2f4a3c;
+  color: #f0e9d8;
 }
 
 footer a {
-  color: whitesmoke;
-  text-decoration: none;
+  color: #f0e9d8;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  font-weight: 700;
 }
 
 address {
@@ -41,7 +40,6 @@ address {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: rgb(51, 64, 42);
 }
 
 .social-icons {
@@ -70,6 +68,10 @@ address {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+hr.footer {
+  color: #f0e9d8;
 }
 
 @media (max-width: 768px) {
