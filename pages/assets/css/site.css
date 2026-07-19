@@ -29,6 +29,7 @@
 html,
 body {
   text-align: center;
+  margin: 0;
 }
 
 .content {
@@ -49,31 +50,10 @@ body {
   color: #333333;
 }
 
-.navbar {
-  padding: 0 20px;
-}
-
-.navbar a {
-  color: #555;
-  font-weight: 600;
-  margin-right: 10px;
-  border-bottom: 3px solid transparent;
-}
-
-a.home {
-  border-bottom: 2px solid grey;
-}
-
-.navbar a:hover {
-  background-color: transparent;
-  color: black;
-  border-bottom: 3px solid grey;
-}
-
 .container {
   display: flex;
   padding: 42px 42px;
-  max-width: 1850px;
+  max-width: 1600px;
   margin: 0 auto;
   padding-top: 36px;
 }

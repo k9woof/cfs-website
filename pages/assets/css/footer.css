@@ -1,9 +1,13 @@
 footer {
   text-align: left;
-  font-size: large;
+  font-size: larger;
   margin: 0 auto;
-  background-color: grey;
-  color: snow;
+  background-color: rgb(117, 117, 70);
+  color: antiquewhite;
+}
+
+footer a {
+  color: whitesmoke;
 }
 
 address {
@@ -17,7 +21,7 @@ address {
   padding-top: 12px;
   max-width: none;
   margin: 0 auto;
-  max-width: 1850px;
+  max-width: 1600px;
 }
 
 .footer-top-block {
@@ -31,7 +35,7 @@ address {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: black;
+  background-color: rgb(51, 64, 42);
 }
 
 .social-icons {
