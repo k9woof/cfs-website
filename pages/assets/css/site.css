@@ -28,7 +28,6 @@
 
 html,
 body {
-  margin: 0;
   text-align: center;
 }
 
@@ -39,7 +38,7 @@ body {
   background-position: center;
   background-clip: border-box;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 105vh;
 }
 
 body {
@@ -125,17 +124,13 @@ a.home {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 16px 16px;
+    padding: 12px 12px;
   }
   .main {
-    flex: 100%;
-    padding: 16px;
+    padding: 8px;
   }
-  .container {
-    gap: 16px;
-  }
-
-  .map-container {
-    margin-bottom: 32px;
+  .data-box {
+    padding: 4px;
+    margin: 10px;
   }
 }
