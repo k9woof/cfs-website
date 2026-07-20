@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="assets/css/site.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/map.css" />
     <link rel="stylesheet" href="assets/css/visit-us.css" />
     <link rel="stylesheet" href="assets/css/data-section.css" />
     <link
@@ -40,28 +39,30 @@
       crossorigin
     />
   </head>
-  <div class="header-container">
-    <header>
-      <h1>Craigellachie Filling Station</h1>
-      <div class="navbar">
-        <a class="home" href="/">Home</a>
-        <a href="#visit">Visit us</a>
-        <a href="/services">Services</a>
-        <a href="/history">History</a>
-      </div>
-    </header>
-  </div>
-  <div class="hero-image">
-    <div class="hero-image-text">
-      <h1>
-        Fuel Stop & Convenience Store <br />
-        in the heart of Speyside
-      </h1>
-      <p>Skip the trip, shop local</p>
-    </div>
-  </div>
   <body>
-    <!-- header-->
+    <!-- header -->
+    <div class="header-container">
+      <header>
+        <h1>Craigellachie Filling Station</h1>
+        <div class="navbar">
+          <a class="home" href="/">Home</a>
+          <a href="#about">About Us</a>
+          <a href="/services">Services</a>
+          <a href="/history">History</a>
+        </div>
+      </header>
+    </div>
+    <!-- hero image -->
+    <div class="hero-image">
+      <div class="hero-image-text">
+        <h1>
+          Fuel Stop & Convenience Store <br />
+          in the heart of Speyside
+        </h1>
+        <p>Skip the trip, shop local</p>
+      </div>
+    </div>
+    <!-- main data section -->
     <div class="main">
       <h2>Fuel Prices</h2>
       <div class="fuel-container">
@@ -108,29 +109,13 @@
     <hr />
     <!-- visit us subsection -->
     <div class="visit-us-super-container">
-      <h2 id="visit">Visit us</h2>
+      <h2 id="visit">About Us</h2>
       <div class="visit-us-container">
-        <div class="opening-address">
-          <p>
-            We are located in the heart of Speyside, and have served both locals
-            and visitors since 2006.
-          </p>
-          <div class="opening-address-block">
-            <h3>Opening Hours</h3>
-            <p>Mon-Fri: 7am - 7pm</p>
-            <p>Saturday: 8am - 7pm</p>
-            <p>Sunday: 9am - 3pm</p>
-          </div>
-          <div class="opening-address-block">
-            <h3>Location</h3>
-            <address>
-              Craigellachie Filling Station, <br />
-              Hill Street, <br />
-              CRAIGELLACHIE, <br />
-              Moray, AB38 9TB
-            </address>
-          </div>
-        </div>
+        <p>
+          We are located in the heart of Speyside, in the picturesque village of
+          Craigellachie, and have served both locals and visitors since 2006.
+          You can use the interactive map below to see where we are located.
+        </p>
         <div class="map-container">
           <div id="map"></div>
           <br />
@@ -154,7 +139,7 @@
         </div>
       </div>
     </div>
-
+    <!-- scripts -->
     <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
     <script
       src="https://unpkg.com/@protomaps/basemaps@5/dist/basemaps.js"
