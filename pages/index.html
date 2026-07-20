@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="assets/css/site.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/visit-us.css" />
+    <link rel="stylesheet" href="assets/css/about-us.css" />
     <link rel="stylesheet" href="assets/css/data-section.css" />
     <link
       href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"
@@ -42,23 +42,29 @@
   <body>
     <!-- header -->
     <div class="header-container">
-      <header>
-        <h1>Craigellachie Filling Station</h1>
-        <div class="navbar">
-          <a class="home" href="/">Home</a>
-          <a href="#about">About Us</a>
-          <a href="/services">Services</a>
-          <a href="/history">History</a>
+      <nav class="navbar">
+        <div class="navbar-title">
+          <b>Craigellachie Filling Station</b>
         </div>
-      </header>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a class="home" href="/" title="Home page">Home</a></li>
+            <li><a href="#about" title="About Us Section">About</a></li>
+            <li><a href="/services" title="Services page">Services</a></li>
+            <li><a href="/history" title="History page">History</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
     <!-- hero image -->
     <div class="hero-image">
       <div class="hero-image-text">
-        <h1>
-          Fuel Stop & Convenience Store <br />
-          in the heart of Speyside
-        </h1>
+        <h1>Fuel Stop & Convenience Store in the heart of Speyside</h1>
         <p>Skip the trip, shop local</p>
       </div>
     </div>
@@ -75,14 +81,18 @@
           <p id="diesel">Loading...</p>
         </div>
       </div>
-      This data is sourced automatically from
-      <a
-        href="https://chargeplacescotland.org/"
-        title="ChargePlace Scotland website"
-        target="_blank"
-        rel="noopener"
-        >ChargePlace Scotland</a
-      >.
+      <p>
+        This data is sourced automatically through the
+        <a
+          title="UK Government Fuel Finder website"
+          alt="Fuel Finder"
+          target="_blank"
+          rel="noopener"
+          href="https://www.gov.uk/government/collections/fuel-finder"
+          >UK Government's Fuel Finder</a
+        >
+        service.
+      </p>
       <h2>EV Charger</h2>
       <div class="ev-container">
         <div class="data-box">
@@ -95,16 +105,16 @@
         </div>
       </div>
 
-      This data is sourced automatically through the
-      <a
-        title="UK Government Fuel Finder website"
-        alt="Fuel Finder"
-        target="_blank"
-        rel="noopener"
-        href="https://www.gov.uk/government/collections/fuel-finder"
-        >UK Government's Fuel Finder</a
-      >
-      service.
+      <p>
+        This data is sourced automatically from
+        <a
+          href="https://chargeplacescotland.org/"
+          title="ChargePlace Scotland website"
+          target="_blank"
+          rel="noopener"
+          >ChargePlace Scotland</a
+        >.
+      </p>
     </div>
     <hr />
     <!-- visit us subsection -->
@@ -127,7 +137,7 @@
               target="_blank"
               >View Larger Map</a
             >
-            /
+            |
             <a
               href="https://www.google.com/maps/dir//Craigellachie+Filling+Station+Ltd,+Hill+St,+Craigellachie,+Aberlour+AB38+9TB/@57.4862635,-3.1867997,17z/data=!4m17!1m7!3m6!1s0x4885a44b313b653f:0x993479a922a81bb3!2sCraigellachie+Filling+Station+Ltd!8m2!3d57.4862606!4d-3.1842248!16s%2Fg%2F1tf3b352!4m8!1m0!1m5!1m1!1s0x4885a44b313b653f:0x993479a922a81bb3!2m2!1d-3.1842248!2d57.4862606!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
               rel="noopener"
@@ -147,6 +157,14 @@
     ></script>
     <script src="assets/js/site.js"></script>
     <script type="module" src="assets/js/map.js"></script>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const links = document.querySelector(".navbar");
+      toggle.addEventListener("click", () => {
+        const isOpen = links.classList.toggle("open");
+        toggle.classList.toggle("open", isOpen);
+      });
+    </script>
 
     <!-- footer -->
     <footer>
@@ -175,7 +193,7 @@
               >
                 <img
                   alt="Facebook Logo"
-                  src="/assets/social-icons/Facebook_Logo_Primary.png"
+                  src="/assets/social-icons/Facebook_Logo_Secondary.png  "
                 />
               </a>
             </div>
@@ -189,22 +207,21 @@
               >
                 <img
                   alt="Instagram Logo"
-                  src="/assets/social-icons/Instagram_Glyph_Gradient.png"
+                  src="/assets/social-icons/Instagram_Glyph_White.png "
                 />
               </a>
             </div>
           </div>
-          <br />
         </div>
         <div class="footer-top-block">
-          <div class="opening-address">
-            <div class="opening-address-block">
+          <div class="footer-top-block-sub">
+            <div class="footer-top-block-sub-sub">
               <h3>Opening Hours</h3>
               <p>Mon-Fri: 7am - 7pm</p>
               <p>Saturday: 8am - 7pm</p>
               <p>Sunday: 9am - 3pm</p>
             </div>
-            <div class="opening-address-block">
+            <div class="footer-top-block-sub-sub">
               <h3>Location</h3>
               <address>
                 Craigellachie Filling Station, <br />
@@ -224,43 +241,45 @@
           </div>
         </div>
         <div class="footer-top-block">
-          <h3>Useful Links</h3>
-          <a
-            href="https://www.craigellachie.org.uk/"
-            title="Craigellachie Village Council website"
-            rel="noopener"
-            target="_blank"
-            >Craigellachie Village Council</a
-          >
-          <br />
-          <a
-            href="https://www.friendsofcraigellachiebridge.org/"
-            title="Friends of Craigellachie Bridge website"
-            rel="noopener"
-            target="_blank"
-            >Friends of Craigellachie Bridge</a
-          ><br />
-          <a
-            href="http://www.moray.gov.uk/"
-            title="Moray Council website"
-            rel="noopener"
-            target="_blank"
-            >Moray Council</a
-          ><br />
-          <a
-            href="https://morayspeyside.com/"
-            title="Moray Speyside website"
-            rel="noopener"
-            target="_blank"
-            >Moray Speyside</a
-          ><br />
-          <a
-            href="https://www.spiritofspeyside.com/visit"
-            title="Spirit of Speyside website"
-            rel="noopener"
-            target="_blank"
-            >Spirit of Speyside</a
-          >
+          <div class="footer-top-block-links">
+            <h3>Useful Links</h3>
+            <a
+              href="https://www.craigellachie.org.uk/"
+              title="Craigellachie Village Council website"
+              rel="noopener"
+              target="_blank"
+              >Craigellachie Village Council</a
+            >
+            <br />
+            <a
+              href="https://www.friendsofcraigellachiebridge.org/"
+              title="Friends of Craigellachie Bridge website"
+              rel="noopener"
+              target="_blank"
+              >Friends of Craigellachie Bridge</a
+            ><br />
+            <a
+              href="http://www.moray.gov.uk/"
+              title="Moray Council website"
+              rel="noopener"
+              target="_blank"
+              >Moray Council</a
+            ><br />
+            <a
+              href="https://morayspeyside.com/"
+              title="Moray Speyside website"
+              rel="noopener"
+              target="_blank"
+              >Moray Speyside</a
+            ><br />
+            <a
+              href="https://www.spiritofspeyside.com/visit"
+              title="Spirit of Speyside website"
+              rel="noopener"
+              target="_blank"
+              >Spirit of Speyside</a
+            >
+          </div>
         </div>
       </div>
       <hr class="footer" />

@@ -1,5 +1,5 @@
 .main {
-  text-align: left;
+  text-align: center;
   padding: 24px;
   font-size: large;
   margin: 0 auto;
@@ -18,14 +18,12 @@
 }
 
 .data-box {
-  background-color: snow;
-  border: 1px solid #eaeaea;
+  background-color: #dda463;
+  border: 2px solid #2b2320;
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   flex: 45%;
   margin: 12px;
   font-size: larger;
-  color: #333333;
   padding-top: 8px;
 }

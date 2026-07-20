@@ -11,7 +11,7 @@ footer a {
 }
 
 footer a:hover {
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 address {
@@ -20,26 +20,16 @@ address {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 0.75fr 0.5fr 0.75fr;
-  padding: 16px;
-  padding-bottom: 16px;
-  padding-top: 12px;
+  grid-template-columns: 1fr 0.75fr 0.75fr;
+  padding: 20px;
   margin: 0 auto;
   max-width: 1600px;
-  justify-content: center;
-  gap: 20px;
-}
-
-.footer-top-block {
-  padding: 24px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  justify-content: space-between;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px;
 }
 
 .social-icons {
@@ -75,24 +65,18 @@ hr.footer {
 }
 
 @media (max-width: 768px) {
-  .footer-top-block {
-    padding-bottom: 8px;
-  }
   .footer-top {
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .opening-address {
     display: flex;
-    text-align: center;
     flex-wrap: wrap;
   }
-  .opening-address-block {
-    flex: 50%;
+  .footer-top-block {
+    flex: 100%;
   }
-  .social-icons,
-  .icon-box {
-    align-items: center;
-    justify-content: center;
+  .footer-top-block-sub {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-top-block-sub-sub {
+    flex: auto;
   }
 }
