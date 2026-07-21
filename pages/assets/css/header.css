@@ -14,10 +14,11 @@
   margin: 0 auto;
   max-width: 1600px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0.5rem;
 }
 
@@ -31,6 +32,7 @@
 
 .navbar-links {
   height: 100%;
+  z-index: 15;
 }
 
 .navbar-links ul {
@@ -45,16 +47,12 @@
   font-weight: 600;
   margin-right: 16px;
   text-decoration: none;
+  padding: 0.5rem;
 }
 
 .navbar-links li {
   font-size: larger;
   list-style: none;
-}
-
-.navbar-links li a.home {
-  text-decoration: underline;
-  font-weight: 700;
 }
 
 .navbar-links a:hover {
@@ -63,15 +61,17 @@
 }
 
 .toggle-button {
-  margin: 0.5rem;
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 50px;
-  height: 35px;
+  height: 40px;
+  z-index: 20;
 }
 
 .toggle-button .bar {
@@ -79,35 +79,77 @@
   width: 100%;
   background-color: #f0e9d8;
   border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.toggle-button.active .bar:nth-child(1) {
+  transform: translateY(18px) rotate(45deg);
+}
+
+.toggle-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.active .bar:nth-child(3) {
+  transform: translateY(-18px) rotate(-45deg);
+}
+
+.navbar-divider {
+  display: none;
+  color: #f0e9d8;
+  margin: 0 auto;
+  width: 70%;
 }
 
 @media (max-width: 768px) {
   .toggle-button {
     display: flex;
   }
+  .navbar-links {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: #2f4a3c;
+    z-index: 15;
+    height: auto;
+  }
+
   .navbar-title {
+    padding: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
     padding: 0.25rem;
   }
 
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar-links {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links li {
+  .navbar-links ul li {
     text-align: center;
+    padding: 1rem;
+    padding-top: 0.25rem;
   }
 
-  .navbar-links li a {
-    padding: 0.5rem 1rem;
+  .navbar-links ul li a {
+    margin-right: 0;
   }
 
   .navbar-links.active {
+    display: block;
+    border-radius: 0 0 12px 12px;
+    padding: 0;
+    border-top: 0;
+  }
+  .navbar-links.active ul li a {
+    flex: 100%;
+  }
+
+  .navbar-divider {
     display: flex;
   }
 }

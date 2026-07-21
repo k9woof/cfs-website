@@ -9,19 +9,31 @@
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <script src="assets/js/nav-bar.js" defer></script>
   </head>
-  <div class="header-container">
-    <header>
-      <h1>Craigellachie Filling Station</h1>
-      <div class="navbar">
-        <a class="home" href="/">Home</a>
-        <a href="/#visit">Visit us</a>
-        <a href="/services">Services</a>
-        <a href="/history">History</a>
-      </div>
-    </header>
-  </div>
   <body>
+    <!-- header -->
+    <div class="header-container">
+      <nav class="navbar">
+        <div class="navbar-title">
+          <b>Craigellachie Filling Station</b>
+        </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <hr class="navbar-divider" />
+          <ul>
+            <li><a class="home" href="/" title="Home page">Home</a></li>
+            <li><a href="#about" title="About Us Section">About</a></li>
+            <li><a href="/services" title="Services page">Services</a></li>
+            <li><a href="/history" title="History page">History</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="policy">
       <h2>Error 404: Page not found</h2>
       <p>Unfortunately, the page you have requested does not seem to exist.</p>
@@ -57,7 +69,7 @@
               >
                 <img
                   alt="Facebook Logo"
-                  src="/assets/social-icons/Facebook_Logo_Primary.png"
+                  src="/assets/social-icons/Facebook_Logo_Secondary.png  "
                 />
               </a>
             </div>
@@ -71,22 +83,21 @@
               >
                 <img
                   alt="Instagram Logo"
-                  src="/assets/social-icons/Instagram_Glyph_Gradient.png"
+                  src="/assets/social-icons/Instagram_Glyph_White.png "
                 />
               </a>
             </div>
           </div>
-          <br />
         </div>
         <div class="footer-top-block">
-          <div class="opening-address">
-            <div class="opening-address-block">
+          <div class="footer-top-block-sub">
+            <div class="footer-top-block-sub-sub">
               <h3>Opening Hours</h3>
               <p>Mon-Fri: 7am - 7pm</p>
               <p>Saturday: 8am - 7pm</p>
               <p>Sunday: 9am - 3pm</p>
             </div>
-            <div class="opening-address-block">
+            <div class="footer-top-block-sub-sub">
               <h3>Location</h3>
               <address>
                 Craigellachie Filling Station, <br />
@@ -106,49 +117,52 @@
           </div>
         </div>
         <div class="footer-top-block">
-          <h3>Useful Links</h3>
-          <a
-            href="https://www.craigellachie.org.uk/"
-            title="Craigellachie Village Council website"
-            rel="noopener"
-            target="_blank"
-            >Craigellachie Village Council</a
-          >
-          <br />
-          <a
-            href="https://www.friendsofcraigellachiebridge.org/"
-            title="Friends of Craigellachie Bridge website"
-            rel="noopener"
-            target="_blank"
-            >Friends of Craigellachie Bridge</a
-          ><br />
-          <a
-            href="http://www.moray.gov.uk/"
-            title="Moray Council website"
-            rel="noopener"
-            target="_blank"
-            >Moray Council</a
-          ><br />
-          <a
-            href="https://morayspeyside.com/"
-            title="Moray Speyside website"
-            rel="noopener"
-            target="_blank"
-            >Moray Speyside</a
-          ><br />
-          <a
-            href="https://www.spiritofspeyside.com/visit"
-            title="Spirit of Speyside website"
-            rel="noopener"
-            target="_blank"
-            >Spirit of Speyside</a
-          >
+          <div class="footer-top-block-links">
+            <h3>Useful Links</h3>
+            <a
+              href="https://www.craigellachie.org.uk/"
+              title="Craigellachie Village Council website"
+              rel="noopener"
+              target="_blank"
+              >Craigellachie Village Council</a
+            >
+            <br />
+            <a
+              href="https://www.friendsofcraigellachiebridge.org/"
+              title="Friends of Craigellachie Bridge website"
+              rel="noopener"
+              target="_blank"
+              >Friends of Craigellachie Bridge</a
+            ><br />
+            <a
+              href="http://www.moray.gov.uk/"
+              title="Moray Council website"
+              rel="noopener"
+              target="_blank"
+              >Moray Council</a
+            ><br />
+            <a
+              href="https://morayspeyside.com/"
+              title="Moray Speyside website"
+              rel="noopener"
+              target="_blank"
+              >Moray Speyside</a
+            ><br />
+            <a
+              href="https://www.spiritofspeyside.com/visit"
+              title="Spirit of Speyside website"
+              rel="noopener"
+              target="_blank"
+              >Spirit of Speyside</a
+            >
+          </div>
         </div>
       </div>
+      <hr class="footer" />
       <div class="footer-bottom">
-        © 2026 Craigellachie Filling Station Limited, All Rights Reserved.
+        © 2026 Craigellachie Filling Station Limited, All Rights Reserved
         <br />
-        Registered in Scotland No. 297889. <br />
+        Registered in Scotland No. 297889 <br />
         <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a> |
         <a href="/terms-of-service" title="Terms of Service"
           >Terms of Service</a
