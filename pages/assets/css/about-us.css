@@ -4,8 +4,9 @@
   font-size: large;
   margin: 0 auto;
   max-width: 1600px;
-  font-size: larger;
+  font-size: 1.25rem;
   text-align: left;
+  scroll-margin-top: 80px;
 }
 
 .map-container {
@@ -34,5 +35,8 @@
   }
   .map-container #map {
     aspect-ratio: 5 / 4;
+  }
+  .visit-us-super-container {
+    scroll-margin-top: 160px;
   }
 }

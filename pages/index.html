@@ -30,7 +30,7 @@
       href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
     <link
       rel="preload"
       href="assets/fonts/inter-v20-latin-regular.woff2"
@@ -40,14 +40,14 @@
     />
     <script src="assets/js/nav-bar.js" defer></script>
   </head>
-  <body>
+  <body id="#">
     <!-- header -->
     <div class="header-container">
       <nav class="navbar">
         <div class="navbar-title">
           <b>Craigellachie Filling Station</b>
         </div>
-        <a href="#" class="toggle-button">
+        <a class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -55,10 +55,22 @@
         <div class="navbar-links">
           <hr class="navbar-divider" />
           <ul>
-            <li><a class="home" href="/" title="Home page">Home</a></li>
-            <li><a href="#about" title="About Us Section">About</a></li>
-            <li><a href="/services" title="Services page">Services</a></li>
-            <li><a href="/history" title="History page">History</a></li>
+            <li><a class="home" href="#" title="Home page">Home</a></li>
+            <li>
+              <a class="about" href="#about-us" title="About Us Section"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="services" href="/services" title="Services page"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="history" href="/history" title="History page"
+                >History</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
@@ -106,7 +118,6 @@
           <p id="tariff">Loading...</p>
         </div>
       </div>
-
       <p>
         This data is sourced automatically from
         <a
@@ -120,8 +131,8 @@
     </div>
     <hr />
     <!-- visit us subsection -->
-    <div class="visit-us-super-container">
-      <h2 id="visit">About Us</h2>
+    <div id="about-us" class="visit-us-super-container">
+      <h2>About Us</h2>
       <div class="visit-us-container">
         <p>
           We are located in the heart of Speyside, in the picturesque village of
@@ -159,14 +170,6 @@
     ></script>
     <script src="assets/js/site.js"></script>
     <script type="module" src="assets/js/map.js"></script>
-    <script>
-      const toggle = document.querySelector(".nav-toggle");
-      const links = document.querySelector(".navbar");
-      toggle.addEventListener("click", () => {
-        const isOpen = links.classList.toggle("open");
-        toggle.classList.toggle("open", isOpen);
-      });
-    </script>
 
     <!-- footer -->
     <footer>
