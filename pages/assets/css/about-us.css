@@ -6,7 +6,6 @@
   font-size: 1.25rem;
   margin: 0 auto;
   max-width: 1600px;
-  font-size: 1.25rem;
   text-align: left;
   scroll-margin-top: 10rem;
 }
@@ -20,7 +19,6 @@
 
 .map-text {
   text-align: center;
-  font-size: medium;
 }
 
 .map-container #map {
@@ -29,6 +27,7 @@
   border: 0;
   border-radius: 8px;
   border: 2px solid #2b2320;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
