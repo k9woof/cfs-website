@@ -1,204 +1,107 @@
+/* piazzolla-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: "Inter";
+  font-family: "Piazzolla";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2");
+  src: url("../fonts/piazzolla-v42-latin-regular.woff2") format("woff2");
 }
 
+/* piazzolla-600 - latin */
 @font-face {
   font-display: swap;
-  font-family: "Inter";
+  font-family: "Piazzolla";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/inter-v20-latin-600.woff2") format("woff2");
+  src: url("../fonts/piazzolla-v42-latin-600.woff2") format("woff2");
 }
 
+/* piazzolla-700 - latin */
 @font-face {
   font-display: swap;
-  font-family: "Inter";
+  font-family: "Piazzolla";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/inter-v20-latin-700.woff2") format("woff2");
+  src: url("../fonts/piazzolla-v42-latin-700.woff2") format("woff2");
 }
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
-  margin: 0;
-  text-align: center;
+  scroll-behavior: smooth;
 }
 
-.content {
+body {
+  margin: 0;
+  background-color: #f0e9d8;
+  font-size: 1.25rem;
+  flex: 1;
+  font-family: "Piazzolla";
+  line-height: 1.3;
+  color: #2b2320;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  margin: 0;
 }
 
-header {
-  padding: 20px 40px;
+body h2 {
+  text-decoration: underline;
 }
 
-body {
-  flex: 1;
-  background: #f4f6f8;
-  font-family: "Inter", sans-serif;
-  line-height: 1.3;
-  color: #333333;
+main {
+  flex: 1 0 auto;
 }
 
-.navbar {
-  padding: 0 20px;
+body a {
+  color: #5c7a8a;
+  text-decoration: none;
 }
 
-.navbar a {
-  color: #555;
-  font-weight: 600;
-  margin-right: 10px;
-  border-bottom: 3px solid transparent;
+body a:hover {
+  text-decoration: underline;
 }
 
-a.home {
-  border-bottom: 2px solid grey;
+.hero-image {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Craigellachie.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 50vh;
 }
 
-.navbar a:hover {
-  background-color: transparent;
-  color: black;
-  border-bottom: 3px solid grey;
-}
-
-footer {
-  padding: 20px;
-  flex-shrink: 0;
-}
-
-.container {
-  display: flex;
-  gap: 24px;
-  padding: 24px 24px;
-  max-width: 1850px;
-  margin: 0 auto;
-}
-
-.side {
-  flex: 25%;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e1e4e8;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  padding: 24px;
-  min-width: 280px;
-}
-
-.main {
-  flex: 75%;
-  background-color: #ffffff;
-  padding: 24px;
-  min-width: 0;
-  height: auto;
-  padding-bottom: 20px;
-  border-radius: 12px;
-  border: 1px solid #e1e4e8;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.fuel-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.data-box {
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  flex: 45%;
-  margin: 10px;
-  font-size: larger;
-}
-
-.maps-ev-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.map-container {
-  width: 100%;
-  flex: 50%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.ev-container {
-  flex: 50%;
+.hero-image-text {
+  max-width: 800px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f0e9d8;
+  font-size: 1.5rem;
   padding: 10px;
 }
 
-.social-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-box {
-  width: 75px;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.icon-box img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.filling-station-picture img {
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-}
-
-.map-container #map {
-  width: 100%;
-  height: 80%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+hr {
+  width: 55vw;
+  color: #2b2320;
 }
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 16px 16px;
-  }
-  .side,
   .main {
-    flex: 100%;
-    padding: 16px;
+    padding: 8px;
   }
-  .container {
-    gap: 16px;
+  .data-box {
+    padding: 4px;
+    margin: 10px;
   }
-
-  .map-container {
-    margin-bottom: 32px;
+  .hero-image-text {
+    font-size: 1.25rem;
   }
 }
