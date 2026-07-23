@@ -98,6 +98,10 @@ body {
   margin: 0;
 }
 
+body h2 {
+  text-decoration: underline;
+}
+
 main {
   flex: 1 0 auto;
 }

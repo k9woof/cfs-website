@@ -2,28 +2,29 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 1rem;
   height: auto;
-  padding-bottom: 20px;
-  border-radius: 12px;
-  max-width: 1650px;
+  padding-bottom: 3rem;
+  max-width: 1600px;
+  font-size: 1.25rem;
 }
 
 .content-block {
   flex: 25%;
-  padding: 12px;
+  padding: 1.25rem;
   text-align: center;
-  flex-wrap: wrap;
+  display: grid;
+}
+
+.content-header {
+  font-weight: 700;
+  font-size: 1.75rem;
 }
 
 .service-picture img {
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 335px;
-}
-
-a.services {
-  border-bottom: 2px solid grey;
+  border-radius: 8px;
+  border: 2px solid #2b2320;
 }
 
 @media (max-width: 768px) {

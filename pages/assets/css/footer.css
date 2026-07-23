@@ -8,6 +8,15 @@ footer {
   flex-shrink: 0;
 }
 
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer h3 {
+  text-decoration: underline;
+}
+
 footer a {
   color: #f0e9d8;
 }
