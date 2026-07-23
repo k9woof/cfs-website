@@ -6,7 +6,7 @@
   max-width: 1600px;
   font-size: 1.25rem;
   text-align: left;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 10rem;
 }
 
 .map-container {
@@ -37,6 +37,6 @@
     aspect-ratio: 5 / 4;
   }
   .visit-us-super-container {
-    scroll-margin-top: 160px;
+    scroll-margin-top: 10rem;
   }
 }

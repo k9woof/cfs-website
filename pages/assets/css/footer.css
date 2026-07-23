@@ -1,9 +1,11 @@
 footer {
   text-align: left;
-  font-size: larger;
+  font-size: 1.25rem;
   margin: 0 auto;
   background-color: #2b2320;
   color: #f0e9d8;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 footer a {

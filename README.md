@@ -22,6 +22,10 @@ The EV charger worker fetches from [ChargePlace Scotland's public API](https://c
 
 The worker code (map-worker/src/index.js) for the map-tile worker is taken from [this repository](https://github.com/protomaps/PMTiles/tree/main/serverless/cloudflare). In the root of the map-worker (/map-worker/LICENSE) is the license from that repository. This was created with help from the guide on [Protomap's website](https://docs.protomaps.com/deploy/cloudflare). This was done to keep the map data in house, and thus avoid transferring user data to a third party.
 
+## Font License attribution
+
+The font used for this development build of the site were [Inter](https://github.com/rsms/inter), [Piazolla](https://github.com/huertatipografica/piazzolla) and [Andada Pro](https://github.com/huertatipografica). In the fonts folder (/pages/assets/fonts/OFL.txt) is included the Open Fonts License for these fonts used in development right now.
+
 ## Development
 
 The website and workers were designed/adapted by Cailan White (@k9woof) on behalf of Craigellachie Filling Station Limited. The website is accessible [at this address](https://craigellachiefillingstation.co.uk).

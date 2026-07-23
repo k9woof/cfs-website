@@ -5,6 +5,12 @@
   margin: 0 auto;
   max-width: 1600px;
   text-align: left;
+  font-size: 1.25rem;
+  height: auto;
+}
+
+.section {
+  display: flex;
 }
 
 p.updates {

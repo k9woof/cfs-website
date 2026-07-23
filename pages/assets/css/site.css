@@ -1,3 +1,84 @@
+/* piazzolla-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Piazzolla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/piazzolla-v42-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* piazzolla-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Piazzolla";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/piazzolla-v42-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* piazzolla-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Piazzolla";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/piazzolla-v42-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* piazzolla-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Piazzolla";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/piazzolla-v42-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* piazzolla-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Piazzolla";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/piazzolla-v42-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* andada-pro-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Andada Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/andada-pro-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* andada-pro-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Andada Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/andada-pro-v26-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* andada-pro-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Andada Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/andada-pro-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* andada-pro-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Andada Pro";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/andada-pro-v26-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 @font-face {
   font-display: swap;
   font-family: "Inter";
@@ -33,11 +114,19 @@ html {
 body {
   margin: 0;
   background-color: #f0e9d8;
-  font-size: 16px;
+  font-size: 1.25rem;
   flex: 1;
-  font-family: "Inter";
+  font-family: "Piazzolla";
   line-height: 1.3;
   color: #2b2320;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 body a {
