@@ -2,23 +2,17 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
-  height: auto;
-  padding-bottom: 3rem;
-  max-width: 1600px;
-  font-size: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.intro-text {
+  padding-bottom: 1rem;
 }
 
 .content-block {
   flex: 25%;
-  padding: 1.25rem;
   text-align: center;
   display: grid;
-}
-
-.content-header {
-  font-weight: 700;
-  font-size: 1.75rem;
 }
 
 .service-picture img {
@@ -33,7 +27,6 @@
     padding: 1rem 0.5rem 1rem 0.5rem;
   }
   .rows {
-    padding: 0.25rem;
     flex-wrap: wrap;
   }
   .service-picture img {

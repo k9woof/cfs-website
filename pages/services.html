@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/css/services.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/additional-pages.css" />
     <link rel="icon" type="image/png" href="/assets/logo.png" />
     <script src="assets/js/nav-bar.js" defer></script>
     <link
@@ -36,104 +37,128 @@
       crossorigin
     />
   </head>
-
   <body>
-    <main>
-      <!-- header -->
-      <div class="header-container">
-        <nav class="navbar">
-          <img
-            class="header-logo"
-            src="assets/logo.png"
-            alt="Craigellachie Filling Station logo"
-          />
-          <div class="navbar-title">
-            <b>Craigellachie Filling Station</b>
-          </div>
-          <a class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <hr class="navbar-divider" />
+    <!-- header -->
+    <header>
+      <div class="navbar">
+        <img
+          class="header-logo"
+          src="assets/logo.png"
+          alt="Craigellachie Filling Station logo"
+        />
+        <div class="navbar-title">
+          <b>Craigellachie Filling Station</b>
+        </div>
+        <a
+          class="toggle-button"
+          role="button"
+          aria-label="Navigation dropdown menu toggle button"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <hr class="navbar-divider" />
+          <nav aria-label="Main">
             <ul>
               <li><a class="home" href="/">Home</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/history">History</a></li>
+              <li>
+                <a class="about" href="/#about-us">About</a>
+              </li>
+              <li>
+                <a class="services" href="/services">Services</a>
+              </li>
+              <li>
+                <a class="history" href="/history">History</a>
+              </li>
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
+    </header>
+    <main>
       <!-- content section -->
-      <div class="rows">
-        <div class="content-block">
-          <div class="content-header">Whisky</div>
-          <p>You can browse our wide selection of whisky in store.</p>
-          <div class="service-picture">
-            <img
-              alt="Whisky shelves inside shop"
-              src="assets/services/whisky.jpg"
-            />
-          </div>
-        </div>
-        <div class="content-block">
-          <div class="content-header">Costa Coffee</div>
-          <p>We have a Costa Coffee machine in store.</p>
-          <div class="service-picture">
-            <img
-              src="assets/services/costa-coffee.jpg"
-              alt="Costa Coffee machine inside shop"
-            />
-          </div>
-        </div>
-        <div class="content-block">
-          <div class="content-header">Jet Wash</div>
-          <p>Wash your car or van with our Jet Wash on site.</p>
-          <div class="service-picture">
-            <img src="assets/services/jet-wash.jpg" alt="Jet wash on site" />
-          </div>
-        </div>
-        <div class="content-block">
-          <div class="content-header">Coal</div>
-          <p>Coal, and logs are available on site.</p>
-          <div class="service-picture">
-            <img src="assets/services/coal.jpg" alt="Connan Coal on site" />
-          </div>
-        </div>
-        <div class="content-block">
-          <div class="content-header">Parcel lockers</div>
+      <div class="policy">
+        <div class="intro-text">
+          <h1 class="policy-title">Services</h1>
           <p>
-            Send, return or collect parcels with our Royal Mail and Inpost
-            lockers on site.
+            Beyond fuel & traditional convenience store amenities, we offer a
+            wide range of additional services. Explore some examples below.
           </p>
-          <div class="service-picture">
-            <img src="assets/services/mail-lockers.jpg" alt="Parcel lockers" />
-          </div>
         </div>
-        <div class="content-block">
-          <div class="content-header">Air Pump</div>
-          <p>Top up your tyres with our air pump on site.</p>
-          <div class="service-picture">
-            <img src="assets/services/air-pump.jpg" alt="Air pump on site" />
+        <hr />
+        <div class="rows">
+          <div class="content-block">
+            <h2 class="policy-section-header">Whisky</h2>
+            <p>You can browse our wide selection of whisky in store.</p>
+            <div class="service-picture">
+              <img
+                alt="Whisky shelves inside shop"
+                src="assets/services/whisky.jpg"
+              />
+            </div>
           </div>
-        </div>
-        <div class="content-block">
-          <div class="content-header">Free Cash Withdrawals</div>
-          <p>Our in-store cash machine offers free cash withdrawals.</p>
-          <div class="service-picture">
-            <img
-              src="assets/services/cash-machine.jpg"
-              alt="Cash Machine inside shop"
-            />
+          <div class="content-block">
+            <h2 class="policy-section-header">Costa Coffee</h2>
+            <p>We have a Costa Coffee machine in store.</p>
+            <div class="service-picture">
+              <img
+                src="assets/services/costa-coffee.jpg"
+                alt="Costa Coffee machine inside shop"
+              />
+            </div>
           </div>
-        </div>
-        <div class="content-block">
-          <div class="content-header">Calor Gas</div>
-          <p>Calor Gas bottles are available on site.</p>
-          <div class="service-picture">
-            <img src="assets/services/gas.jpg" alt="Calor Gas on site" />
+          <div class="content-block">
+            <h2 class="policy-section-header">Jet Wash</h2>
+            <p>Wash your car or van with our Jet Wash on site.</p>
+            <div class="service-picture">
+              <img src="assets/services/jet-wash.jpg" alt="Jet wash on site" />
+            </div>
+          </div>
+          <div class="content-block">
+            <h2 class="policy-section-header">Coal</h2>
+            <p>Coal, and logs are available on site.</p>
+            <div class="service-picture">
+              <img src="assets/services/coal.jpg" alt="Connan Coal on site" />
+            </div>
+          </div>
+          <div class="content-block">
+            <h2 class="policy-section-header">Parcel lockers</h2>
+            <p>
+              Send, return or collect parcels with our Royal Mail and Inpost
+              lockers on site.
+            </p>
+            <div class="service-picture">
+              <img
+                src="assets/services/mail-lockers.jpg"
+                alt="Parcel lockers"
+              />
+            </div>
+          </div>
+          <div class="content-block">
+            <h2 class="policy-section-header">Air Pump</h2>
+            <p>Top up your tyres with our air pump on site.</p>
+            <div class="service-picture">
+              <img src="assets/services/air-pump.jpg" alt="Air pump on site" />
+            </div>
+          </div>
+          <div class="content-block">
+            <h2 class="policy-section-header">Free Cash Withdrawals</h2>
+            <p>Our in-store cash machine offers free cash withdrawals.</p>
+            <div class="service-picture">
+              <img
+                src="assets/services/cash-machine.jpg"
+                alt="Cash Machine inside shop"
+              />
+            </div>
+          </div>
+          <div class="content-block">
+            <h2 class="policy-section-header">Calor Gas</h2>
+            <p>Calor Gas bottles are available on site.</p>
+            <div class="service-picture">
+              <img src="assets/services/gas.jpg" alt="Calor Gas on site" />
+            </div>
           </div>
         </div>
       </div>
@@ -258,22 +283,23 @@
           </div>
           <div class="footer-top-block-sitemap">
             <h2 class="footer-section-title">Site map</h2>
-            <ul>
-              <li><a class="home" href="/">Home</a></li>
-
-              <li>
-                <a class="services" href="/services">Services</a>
-              </li>
-              <li>
-                <a class="history" href="/history">History</a>
-              </li>
-              <li>
-                <a href="/privacy-policy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="/terms-of-service">Terms of Service</a>
-              </li>
-            </ul>
+            <nav aria-label="Footer">
+              <ul>
+                <li><a class="home" href="/">Home</a></li>
+                <li>
+                  <a class="services" href="/services">Services</a>
+                </li>
+                <li>
+                  <a class="history" href="/history">History</a>
+                </li>
+                <li>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms-of-service">Terms of Service</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

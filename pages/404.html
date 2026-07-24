@@ -12,36 +12,48 @@
     <script src="assets/js/nav-bar.js" defer></script>
   </head>
   <body>
-    <main>
-      <!-- header -->
-      <div class="header-container">
-        <nav class="navbar">
-          <img
-            class="header-logo"
-            src="assets/logo.png"
-            alt="Craigellachie Filling Station logo"
-          />
-          <div class="navbar-title">
-            <b>Craigellachie Filling Station</b>
-          </div>
-          <a class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <hr class="navbar-divider" />
+    <!-- header -->
+    <header>
+      <div class="navbar">
+        <img
+          class="header-logo"
+          src="assets/logo.png"
+          alt="Craigellachie Filling Station logo"
+        />
+        <div class="navbar-title">
+          <b>Craigellachie Filling Station</b>
+        </div>
+        <a
+          class="toggle-button"
+          role="button"
+          aria-label="Navigation dropdown menu toggle button"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <hr class="navbar-divider" />
+          <nav aria-label="Main">
             <ul>
               <li><a class="home" href="/">Home</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/history">History</a></li>
+              <li>
+                <a class="about" href="/#about-us">About</a>
+              </li>
+              <li>
+                <a class="services" href="/services">Services</a>
+              </li>
+              <li>
+                <a class="history" href="/history">History</a>
+              </li>
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
+    </header>
+    <main>
       <div class="policy">
-        <h2>Error 404: Page not found</h2>
+        <h1 class="policy-title">Error 404: Page not found</h1>
         <p>
           Unfortunately, the page you have requested does not seem to exist.
         </p>
@@ -170,22 +182,23 @@
           </div>
           <div class="footer-top-block-sitemap">
             <h2 class="footer-section-title">Site map</h2>
-            <ul>
-              <li><a class="home" href="/">Home</a></li>
-
-              <li>
-                <a class="services" href="/services">Services</a>
-              </li>
-              <li>
-                <a class="history" href="/history">History</a>
-              </li>
-              <li>
-                <a href="/privacy-policy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="/terms-of-service">Terms of Service</a>
-              </li>
-            </ul>
+            <nav aria-label="Footer">
+              <ul>
+                <li><a class="home" href="/">Home</a></li>
+                <li>
+                  <a class="services" href="/services">Services</a>
+                </li>
+                <li>
+                  <a class="history" href="/history">History</a>
+                </li>
+                <li>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms-of-service">Terms of Service</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
