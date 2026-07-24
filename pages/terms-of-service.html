@@ -28,50 +28,62 @@
     <script src="assets/js/nav-bar.js" defer></script>
   </head>
   <body>
-    <main>
-      <!-- header -->
-      <div class="header-container">
-        <nav class="navbar">
-          <img
-            class="header-logo"
-            src="assets/logo.png"
-            alt="Craigellachie Filling Station logo"
-          />
-          <div class="navbar-title">
-            <b>Craigellachie Filling Station</b>
-          </div>
-          <a class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <hr class="navbar-divider" />
+    <!-- header -->
+    <header>
+      <div class="navbar">
+        <img
+          class="header-logo"
+          src="assets/logo.png"
+          alt="Craigellachie Filling Station logo"
+        />
+        <div class="navbar-title">
+          <b>Craigellachie Filling Station</b>
+        </div>
+        <a
+          class="toggle-button"
+          role="button"
+          aria-label="Navigation dropdown menu toggle button"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <hr class="navbar-divider" />
+          <nav aria-label="Main">
             <ul>
               <li><a class="home" href="/">Home</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/history">History</a></li>
+              <li>
+                <a class="about" href="/#about-us">About</a>
+              </li>
+              <li>
+                <a class="services" href="/services">Services</a>
+              </li>
+              <li>
+                <a class="history" href="/history">History</a>
+              </li>
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
+    </header>
+    <main>
       <!-- section -->
       <div class="policy">
-        <h2>Terms of Service</h2>
-        <p class="updates">Last updated: 18/07/2026</p>
+        <h1 class="policy-title">Terms of Service</h1>
+        <div class="updates">Last updated: 18/07/2026</div>
         <p>
           This website is operated by Craigellachie Filling Station Limited
           ("we", "us", "our"). These terms of service explain what this website
           offers, and what we expect from visitors to this website.
         </p>
-        <h3>1. Acceptance of Terms</h3>
+        <h2 class="policy-section-header">1. Acceptance of Terms</h2>
         <p>
           By accessing or using our website (the "Site"), you agree to be bound
           by these Terms of Service ("Terms"). If you do not agree, please do
           not use the site.
         </p>
-        <h3>2. About the Site</h3>
+        <h2 class="policy-section-header">2. About the Site</h2>
         <p>
           The Site provides information about us. Such as our current fuel
           price, the availability of our electric vehicle charger, or where we
@@ -79,7 +91,7 @@
           For more information about our data practices see our
           <a href="/privacy-policy">Privacy Policy</a>.
         </p>
-        <h3>3. Use of the Site</h3>
+        <h2 class="policy-section-header">3. Use of the Site</h2>
         <p>
           You agree to use the Site only for lawful purposes. You agree not to:
         </p>
@@ -101,7 +113,7 @@
             Use the Site to violate any applicable law or third party right
           </li>
         </ul>
-        <h3>4. Intellectual Property</h3>
+        <h2 class="policy-section-header">4. Intellectual Property</h2>
         <p>
           All content on the Site, including text, graphics, and design is owned
           by Craigellachie Filling Station Limited or its licensors, and is
@@ -110,7 +122,7 @@
           personal, non-commercial use, but may not reproduce, distribute, or
           create derivitave works without prior written permission.
         </p>
-        <h3>5. Information Disclaimer</h3>
+        <h2 class="policy-section-header">5. Information Disclaimer</h2>
         <p>
           The information provided on this site, such as the fuel price or EV
           charger availability/tariff are not guaranteed to be correct. There
@@ -118,13 +130,13 @@
           outdated or incorrect. As such, we make no guarantees to the
           correctness, accuracy, or timliness of content on the Site.
         </p>
-        <h3>6. Third-Party Links</h3>
+        <h2 class="policy-section-header">6. Third-Party Links</h2>
         <p>
           The Site contains many links to third-party websites. We do not
           control and are not responsible for the content, privacy practices, or
           terms of those sites.
         </p>
-        <h3>7. Disclaimer of Warranties</h3>
+        <h2 class="policy-section-header">7. Disclaimer of Warranties</h2>
         <p>
           The Site is provided "as is" and "as available" without warranties of
           any kind, whether express or implied, including but not limited to
@@ -132,7 +144,7 @@
           non-infringement. We do not warrant that the Site will be
           uninterrupted, error-free or secure.
         </p>
-        <h3>8. Limitation of Liability</h3>
+        <h2 class="policy-section-header">8. Limitation of Liability</h2>
         <p>
           To the fullest extent permitted by law, Craigellachie Filling Station
           Limited shall not be lliable for any indirect, incidental, special,
@@ -140,24 +152,24 @@
           use of, or inability to use, the Site, even if advised of the
           possibility of such damages.
         </p>
-        <h3>9. Indemnification</h3>
+        <h2 class="policy-section-header">9. Indemnification</h2>
         <p>
           You agree to indemnify and hold harmless Craigellachie Filling Station
           Limited from any claims, damages, losses, or expenses (including
           reasonable lawyer's fees) arising out of your use of the Site or
           violation of these Terms.
         </p>
-        <h3>10. Changes to these Terms</h3>
+        <h2 class="policy-section-header">10. Changes to these Terms</h2>
         <p>
           We may update these Terms from time to time. Any changes will be
           posted on this page with an updated revision date.
         </p>
-        <h3>11. Governing Law</h3>
+        <h2 class="policy-section-header">11. Governing Law</h2>
         <p>
           We are located in Scotland, and the law of Scotland shalll govern any
           interpretation of these Terms.
         </p>
-        <h3>12. Contact Us</h3>
+        <h2 class="policy-section-header">12. Contact Us</h2>
         <p>
           If you have any questions about these Terms, please contact us at:
         </p>
@@ -301,22 +313,23 @@
           </div>
           <div class="footer-top-block-sitemap">
             <h2 class="footer-section-title">Site map</h2>
-            <ul>
-              <li><a class="home" href="/">Home</a></li>
-
-              <li>
-                <a class="services" href="/services">Services</a>
-              </li>
-              <li>
-                <a class="history" href="/history">History</a>
-              </li>
-              <li>
-                <a href="/privacy-policy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="/terms-of-service">Terms of Service</a>
-              </li>
-            </ul>
+            <nav aria-label="Footer">
+              <ul>
+                <li><a class="home" href="/">Home</a></li>
+                <li>
+                  <a class="services" href="/services">Services</a>
+                </li>
+                <li>
+                  <a class="history" href="/history">History</a>
+                </li>
+                <li>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms-of-service">Terms of Service</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

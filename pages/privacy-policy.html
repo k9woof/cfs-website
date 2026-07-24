@@ -28,51 +28,59 @@
     <script src="assets/js/nav-bar.js" defer></script>
   </head>
   <body>
-    <main>
-      <!-- header -->
-      <div class="header-container">
-        <nav class="navbar">
-          <img
-            class="header-logo"
-            src="assets/logo.png"
-            alt="Craigellachie Filling Station logo"
-          />
-          <div class="navbar-title">
-            <b>Craigellachie Filling Station</b>
-          </div>
-          <a class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <hr class="navbar-divider" />
+    <!-- header -->
+    <header>
+      <div class="navbar">
+        <img
+          class="header-logo"
+          src="assets/logo.png"
+          alt="Craigellachie Filling Station logo"
+        />
+        <div class="navbar-title">
+          <b>Craigellachie Filling Station</b>
+        </div>
+        <a
+          class="toggle-button"
+          role="button"
+          aria-label="Navigation dropdown menu toggle button"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <hr class="navbar-divider" />
+          <nav aria-label="Main">
             <ul>
               <li><a class="home" href="/">Home</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/history">History</a></li>
+              <li>
+                <a class="about" href="/#about-us">About</a>
+              </li>
+              <li>
+                <a class="services" href="/services">Services</a>
+              </li>
+              <li>
+                <a class="history" href="/history">History</a>
+              </li>
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
+    </header>
+    <main>
       <!-- content section -->
       <div class="policy">
-        <h2>Privacy Policy</h2>
-        <p class="updates">Last updated: 18/07/2026</p>
+        <h1 class="policy-title">Privacy Policy</h1>
+        <div class="updates">Last updated: 18/07/2026</div>
         <p>
           This website is operated by Craigellachie Filling Station Limited
           ("we", "us", "our"). This policy explains what information we collect
           from visitors and how it's used.
         </p>
-        <h3>1. Hosting and Server Logs</h3>
+        <h2 class="policy-section-header">1. Hosting and Server Logs</h2>
         <p>
           This site is hosted using
-          <a
-            href="https://pages.cloudflare.com/"
-            title="Cloudflare Pages website"
-            target="_blank"
-            rel="noopener"
+          <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener"
             >Cloudflare Pages</a
           >. As part of standard hosting and security operations, Cloudflare may
           automatically process technical information such as your IP address,
@@ -85,22 +93,21 @@
           Cloudflare's own data practices, see
           <a
             href="https://www.cloudflare.com/privacypolicy/"
-            title="Cloudflare's Privacy Policy"
             target="_blank"
             rel="noopener"
             >Cloudflare's Privacy Policy</a
           >.
         </p>
-        <h3>2. Cookies</h3>
+        <h2 class="policy-section-header">2. Cookies</h2>
         <p>
           We do not use cookies for advertising or tracking. Cloudflare may set
           limited, strictly necessary cookies (for example, for security and bot
           protection) as part of delivering the site. These are functional in
           nature and do not require seperate consent under UK data protection
-          law. Our <a href="/cookies" title="Cookies page">cookies</a> page
-          describes the cookies used on this site.
+          law. Our <a href="/cookies">cookies page</a> describes the cookies
+          used on this site.
         </p>
-        <h3>3. Contact by Email or Telephone</h3>
+        <h2 class="policy-section-header">3. Contact by Email or Telephone</h2>
         <p>
           If you contact us directly by email or telephone, we will use the
           personal information you provide (such as your name, email address, or
@@ -110,7 +117,7 @@
           for as long as necessary to deal with your enquiry, after which it
           will be deleted or anonymised.
         </p>
-        <h3>4. Your Rights</h3>
+        <h2 class="policy-section-header">4. Your Rights</h2>
         <p>
           Under UK General Data Protection Regulation (GDPR), you have the right
           to:
@@ -121,19 +128,19 @@
           <li>Object to how it's processed</li>
         </ul>
         <p>
-          To exercise any of these rights, contact us
+          To exercise any of these rights, contact us at
           <a
             href="mailto:privacy@craigellachiefillingstation.co.uk"
             title="Data protection enquiry email for Craigellachie Filling Station"
-            >here</a
+            >privacy@craigellachiefillingstation.co.uk</a
           >.
         </p>
-        <h3>5. Changes to this Policy</h3>
+        <h2 class="policy-section-header">5. Changes to this Policy</h2>
         <p>
           We may update this policy from time to time. Any changes will be
           posted on this page with an updated revision date.
         </p>
-        <h3>6. Contact Us</h3>
+        <h2 class="policy-section-header">6. Contact Us</h2>
         <p>
           If you have any questions about this policy, please contact us at:
         </p>
@@ -161,10 +168,10 @@
     <footer>
       <div class="footer-top">
         <div class="footer-top-block">
-          <h1>
+          <div class="footer-title">
             Craigellachie <br />Filling <br />
             Station
-          </h1>
+          </div>
           <p>
             Email:
             <a href="mailto:enquiries@craigellachiefillingstation.co.uk"
@@ -277,22 +284,23 @@
           </div>
           <div class="footer-top-block-sitemap">
             <h2 class="footer-section-title">Site map</h2>
-            <ul>
-              <li><a class="home" href="/">Home</a></li>
-
-              <li>
-                <a class="services" href="/services">Services</a>
-              </li>
-              <li>
-                <a class="history" href="/history">History</a>
-              </li>
-              <li>
-                <a href="/privacy-policy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="/terms-of-service">Terms of Service</a>
-              </li>
-            </ul>
+            <nav aria-label="Footer">
+              <ul>
+                <li><a class="home" href="/">Home</a></li>
+                <li>
+                  <a class="services" href="/services">Services</a>
+                </li>
+                <li>
+                  <a class="history" href="/history">History</a>
+                </li>
+                <li>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms-of-service">Terms of Service</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

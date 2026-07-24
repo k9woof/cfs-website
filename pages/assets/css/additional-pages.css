@@ -6,8 +6,6 @@
   padding-bottom: 1.25rem;
   margin: 0 auto;
   max-width: 1600px;
-  text-align: left;
-  font-size: 1.25rem;
   height: auto;
 }
 
@@ -15,8 +13,20 @@
   display: flex;
 }
 
-p.updates {
+.updates {
   font-style: italic;
+}
+
+.policy-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.policy-section-header {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 code {
