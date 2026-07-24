@@ -2,7 +2,6 @@
 
 footer {
   text-align: left;
-  font-size: 1.25rem;
   margin: 0 auto;
   background-color: #2b2320;
   color: #f0e9d8;
@@ -15,16 +14,8 @@ footer ul {
   padding: 0;
 }
 
-footer h3 {
-  text-decoration: underline;
-}
-
 footer a {
   color: #f0e9d8;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 address {
@@ -34,15 +25,21 @@ address {
 .footer-top {
   display: grid;
   grid-template-columns: 1fr 0.75fr 0.75fr;
-  padding: 20px;
+  padding: 1.25rem;
   margin: 0 auto;
   max-width: 1600px;
   justify-content: space-between;
 }
 
+.footer-section-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
 .footer-bottom {
   text-align: center;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .social-icons {
@@ -57,7 +54,7 @@ address {
   display: flex;
   align-items: left;
   justify-content: left;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .icon-box img {
