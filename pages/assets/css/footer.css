@@ -12,6 +12,7 @@ footer {
 footer ul {
   list-style: none;
   padding: 0;
+  line-height: 1.4;
 }
 
 footer a {

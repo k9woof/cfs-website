@@ -13,6 +13,7 @@
   flex: 25%;
   text-align: center;
   display: grid;
+  padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .service-picture img {
@@ -24,7 +25,6 @@
 @media (max-width: 768px) {
   .content-block {
     flex: 100%;
-    padding: 1rem 0.5rem 1rem 0.5rem;
   }
   .rows {
     flex-wrap: wrap;
