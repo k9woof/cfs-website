@@ -2,7 +2,7 @@
 
 .visit-us-super-container {
   text-align: left;
-  padding: 24px;
+  padding: 1.5rem;
   font-size: 1.25rem;
   margin: 0 auto;
   max-width: 1600px;
@@ -12,9 +12,9 @@
 
 .map-container {
   width: 100%;
-  padding: 24px;
+  padding: 1.5rem;
   height: auto;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .map-text {
@@ -32,12 +32,12 @@
 
 @media (max-width: 768px) {
   .map-container {
-    padding: 8px;
+    padding: 0.5rem;
   }
   .map-container #map {
     aspect-ratio: 5 / 4;
   }
   .visit-us-super-container {
-    scroll-margin-top: 10rem;
+    scroll-margin-top: 0.625rem;
   }
 }

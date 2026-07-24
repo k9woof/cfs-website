@@ -33,7 +33,7 @@
     <link rel="icon" type="image/png" href="/assets/logo.png" />
     <link
       rel="preload"
-      href="assets/fonts/inter-v20-latin-regular.woff2"
+      href="assets/fonts/piazzolla-v42-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -53,7 +53,11 @@
           <div class="navbar-title">
             <b>Craigellachie Filling Station</b>
           </div>
-          <a class="toggle-button">
+          <a
+            class="toggle-button"
+            role="button"
+            aria-label="Navigation dropdown menu"
+          >
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -61,21 +65,15 @@
           <div class="navbar-links">
             <hr class="navbar-divider" />
             <ul>
-              <li><a class="home" href="#" title="Home page">Home</a></li>
+              <li><a class="home" href="#">Home</a></li>
               <li>
-                <a class="about" href="#about-us" title="About Us Section"
-                  >About</a
-                >
+                <a class="about" href="#about-us">About</a>
               </li>
               <li>
-                <a class="services" href="/services" title="Services page"
-                  >Services</a
-                >
+                <a class="services" href="/services">Services</a>
               </li>
               <li>
-                <a class="history" href="/history" title="History page"
-                  >History</a
-                >
+                <a class="history" href="/history">History</a>
               </li>
             </ul>
           </div>
@@ -84,27 +82,28 @@
       <!-- hero image -->
       <div class="hero-image">
         <div class="hero-image-text">
-          <h1>Fuel Stop & Convenience Store in the heart of Speyside</h1>
-          <p>Skip the trip, shop local</p>
+          <div class="hero-text-title">
+            Fuel Stop & Convenience Store in the heart of Speyside
+          </div>
+          <div class="hero-text-subtitle">Skip the trip, shop local</div>
         </div>
       </div>
       <!-- main data section -->
-      <div class="main">
-        <h2>Fuel Prices</h2>
+      <div id="data-displays" class="data-section">
+        <h2 class="section-header">Fuel Prices</h2>
         <div class="fuel-container">
           <div class="data-box">
-            <h3>Unleaded</h3>
-            <p id="petrol">Loading...</p>
+            <div class="data-display-title">Unleaded</div>
+            <div class="data-display-text" id="petrol">Loading...</div>
           </div>
           <div class="data-box">
-            <h3>Diesel</h3>
-            <p id="diesel">Loading...</p>
+            <div class="data-display-title">Diesel</div>
+            <div class="data-display-text" id="diesel">Loading...</div>
           </div>
         </div>
         <p>
           This data is sourced automatically through the
           <a
-            title="UK Government Fuel Finder website"
             alt="Fuel Finder"
             target="_blank"
             rel="noopener"
@@ -113,22 +112,21 @@
           >
           service.
         </p>
-        <h2>EV Charger</h2>
+        <h2 class="section-header">EV Charger</h2>
         <div class="ev-container">
           <div class="data-box">
-            <h3>Availability</h3>
-            <p id="availability">Loading...</p>
+            <div class="data-display-title">Availability</div>
+            <div class="data-display-text" id="availability">Loading...</div>
           </div>
           <div class="data-box">
-            <h3>Tariff</h3>
-            <p id="tariff">Loading...</p>
+            <div class="data-display-title">Tariff</div>
+            <div class="data-display-text" id="tariff">Loading...</div>
           </div>
         </div>
         <p>
           This data is sourced automatically from
           <a
             href="https://chargeplacescotland.org/"
-            title="ChargePlace Scotland website"
             target="_blank"
             rel="noopener"
             >ChargePlace Scotland</a
@@ -138,7 +136,7 @@
       <hr />
       <!-- visit us subsection -->
       <div id="about-us" class="visit-us-super-container">
-        <h2>About Us</h2>
+        <h2 class="section-header">About Us</h2>
         <div class="visit-us-container">
           <p>
             We are located in the heart of Speyside, and have served both locals
@@ -150,9 +148,9 @@
             <div class="map-text">
               <a
                 href="https://www.openstreetmap.org/?mlat=57.486293&amp;mlon=-3.184139#map=19/57.486293/-3.184139"
-                title="View larger Map on Open Street Map"
                 rel="noopener"
                 target="_blank"
+                aria-label="View larger map on Open Street Map"
                 >View Larger Map</a
               >
               |
@@ -160,7 +158,7 @@
                 href="https://www.google.com/maps/dir//Craigellachie+Filling+Station+Ltd,+Hill+St,+Craigellachie,+Aberlour+AB38+9TB/@57.4862635,-3.1867997,17z/data=!4m17!1m7!3m6!1s0x4885a44b313b653f:0x993479a922a81bb3!2sCraigellachie+Filling+Station+Ltd!8m2!3d57.4862606!4d-3.1842248!16s%2Fg%2F1tf3b352!4m8!1m0!1m5!1m1!1s0x4885a44b313b653f:0x993479a922a81bb3!2m2!1d-3.1842248!2d57.4862606!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
                 rel="noopener"
                 target="_blank"
-                title="Get Directions for Craigellachie Filling Station on Google Maps"
+                aria-label="Get directions to Craigellachie Filling Station"
                 >Get Directions</a
               >
             </div>
@@ -198,7 +196,6 @@
                 id="facebook-link"
                 href="https://www.facebook.com/craigellachiefillingstation"
                 target="_blank"
-                title="Craigellachie Filling Station on Facebook"
                 rel="noopener"
               >
                 <img
@@ -212,7 +209,6 @@
                 id="instagram-link"
                 href="https://www.instagram.com/craigellachiefillingstation1/"
                 target="_blank"
-                title="Craigellachie Filling Station on Instagram"
                 rel="noopener"
               >
                 <img
@@ -226,13 +222,13 @@
         <div class="footer-top-block">
           <div class="footer-top-block-sub">
             <div class="footer-top-block-sub-sub">
-              <h3>Opening Hours</h3>
+              <h2 class="footer-section-title">Opening Hours</h2>
               <p>Mon-Fri: 7am - 7pm</p>
               <p>Saturday: 8am - 7pm</p>
               <p>Sunday: 9am - 3pm</p>
             </div>
             <div class="footer-top-block-sub-sub">
-              <h3>Location</h3>
+              <h2 class="footer-section-title">Location</h2>
               <address>
                 Craigellachie Filling Station, <br />
                 Hill Street, <br />
@@ -244,7 +240,7 @@
                 href="https://www.google.com/maps/dir//Craigellachie+Filling+Station+Ltd,+Hill+St,+Craigellachie,+Aberlour+AB38+9TB/@57.4862635,-3.1867997,17z/data=!4m17!1m7!3m6!1s0x4885a44b313b653f:0x993479a922a81bb3!2sCraigellachie+Filling+Station+Ltd!8m2!3d57.4862606!4d-3.1842248!16s%2Fg%2F1tf3b352!4m8!1m0!1m5!1m1!1s0x4885a44b313b653f:0x993479a922a81bb3!2m2!1d-3.1842248!2d57.4862606!3e0?entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D"
                 rel="noopener"
                 target="_blank"
-                title="Get Directions for Craigellachie Filling Station on Google Maps"
+                aria-label="Get directions to Craigellachie Filling Station on Google Maps"
                 >Get Directions</a
               >
             </div>
@@ -252,12 +248,11 @@
         </div>
         <div class="footer-top-block">
           <div class="footer-top-block-links">
-            <h3>Useful Links</h3>
+            <h2 class="footer-section-title">Useful Links</h2>
             <ul>
               <li>
                 <a
                   href="https://www.craigellachie.org.uk/"
-                  title="Craigellachie Village Council website"
                   rel="noopener"
                   target="_blank"
                   >Craigellachie Village Council</a
@@ -266,7 +261,6 @@
               <li>
                 <a
                   href="https://www.friendsofcraigellachiebridge.org/"
-                  title="Friends of Craigellachie Bridge website"
                   rel="noopener"
                   target="_blank"
                   >Friends of Craigellachie Bridge</a
@@ -275,7 +269,6 @@
               <li>
                 <a
                   href="http://www.moray.gov.uk/"
-                  title="Moray Council website"
                   rel="noopener"
                   target="_blank"
                   >Moray Council</a
@@ -284,7 +277,6 @@
               <li>
                 <a
                   href="https://morayspeyside.com/"
-                  title="Moray Speyside website"
                   rel="noopener"
                   target="_blank"
                   >Moray Speyside</a
@@ -293,7 +285,6 @@
               <li>
                 <a
                   href="https://www.spiritofspeyside.com/visit"
-                  title="Spirit of Speyside website"
                   rel="noopener"
                   target="_blank"
                   >Spirit of Speyside</a
@@ -302,29 +293,21 @@
             </ul>
           </div>
           <div class="footer-top-block-sitemap">
-            <h3>Site map</h3>
+            <h2 class="footer-section-title">Site map</h2>
             <ul>
-              <li><a class="home" href="/" title="Home page">Home</a></li>
+              <li><a class="home" href="#">Home</a></li>
 
               <li>
-                <a class="services" href="/services" title="Services page"
-                  >Services</a
-                >
+                <a class="services" href="/services">Services</a>
               </li>
               <li>
-                <a class="history" href="/history" title="History page"
-                  >History</a
-                >
+                <a class="history" href="/history">History</a>
               </li>
               <li>
-                <a href="/privacy-policy" title="Privacy Policy"
-                  >Privacy Policy</a
-                >
+                <a href="/privacy-policy">Privacy Policy</a>
               </li>
               <li>
-                <a href="/terms-of-service" title="Terms of Service"
-                  >Terms of Service</a
-                >
+                <a href="/terms-of-service">Terms of Service</a>
               </li>
             </ul>
           </div>
@@ -335,10 +318,8 @@
         © 2026 Craigellachie Filling Station Limited, All Rights Reserved
         <br />
         Registered in Scotland No. 297889 <br />
-        <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a> |
-        <a href="/terms-of-service" title="Terms of Service"
-          >Terms of Service</a
-        >
+        <a href="/privacy-policy">Privacy Policy</a> |
+        <a href="/terms-of-service">Terms of Service</a>
       </div>
     </footer>
   </body>
