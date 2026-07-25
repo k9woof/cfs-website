@@ -24,7 +24,7 @@ The worker code (map-worker/src/index.js) for the map-tile worker is taken from 
 
 ## Font License attribution
 
-The font used for this development build of the site were [Inter](https://github.com/rsms/inter), [Piazolla](https://github.com/huertatipografica/piazzolla) and [Andada Pro](https://github.com/huertatipografica). In the fonts folder (/pages/assets/fonts/OFL.txt) is included the Open Fonts License for these fonts used in development right now.
+The font used for this site was [Piazolla](https://github.com/huertatipografica/piazzolla). In the fonts folder (/pages/assets/fonts/OFL.txt) is included the Open Fonts License for this font.
 
 ## Development
 

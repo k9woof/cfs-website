@@ -12,10 +12,16 @@ footer {
 footer ul {
   list-style: none;
   padding: 0;
+  line-height: 1.4;
 }
 
 footer a {
   color: #f0e9d8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 address {
