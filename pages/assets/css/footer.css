@@ -17,6 +17,11 @@ footer ul {
 
 footer a {
   color: #f0e9d8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 address {
