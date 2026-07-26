@@ -1,12 +1,14 @@
 // displaying the interactive map
 
+import * as maplibregl from "../maplibre-gl/maplibre-gl.mjs";
+
 // fetches the basemap from our domain, and then places marker at our location
 const pinLocation = [-3.184139, 57.486293];
 
 const customFlavour = {
   ...basemaps.namedFlavor("light"),
   regular: "Piazzolla Regular",
-  medium: "Piazzolla Medium",
+  bold: "Piazzolla Medium",
   italic: "Piazzolla Italic",
 };
 
