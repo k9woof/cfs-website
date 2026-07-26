@@ -10,6 +10,8 @@ This repository contains the source code for Craigellachie Filling Station Limit
 2. EV Charger worker
 3. Map worker
 
+The aim for this site was to not set tracking or advertising cookies and to limit reliance on third-party cdns. As such the site hosts its fonts, map-tiles, glyphs, sprites etc.
+
 ## Fuel Price worker
 
 The fuel price worker fetches from the [UK Government's Fuel Finder service](https://www.gov.uk/government/collections/fuel-finder). The worker works by fetching from the fuel finder api, making use a oauth token to do so. It then searches through the returned data for the station's prices and then stores the data in a kv cache. This was done so as to reduce the amount of fetches.
@@ -24,11 +26,11 @@ The worker code (map-worker/src/index.js) for the map-tile worker is taken from 
 
 ## Third-Party code notice
 
-The code used to create this interactive map on the homepage of the website uses third-party code, which is self-hosted. The basemap.js file in 'pages/assets/protomaps/basemaps.js' is taken from [this url](https://unpkg.com/@protomaps/basemaps@5.7.2/dist/basemaps.js) and is derived from the [Basemaps repository](https://github.com/protomaps/basemaps), and in that folder is the license from that repository. In addition, the maplibre-gl.css, and maplibre-gl.js files (/pages/assets/maplibre-gl/) are taken from the following urls: [js file](https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js), [css file](https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css). The license from [Maplibre-gl's repository](https://github.com/maplibre/maplibre-gl-js) is included in that folder.
+The code used to create this interactive map on the homepage of the website uses third-party code, which is self-hosted. The basemap.js file in 'pages/assets/protomaps/basemaps.js' is taken from [this url](https://unpkg.com/@protomaps/basemaps@5.7.2/dist/basemaps.js) and is derived from the [Basemaps repository](https://github.com/protomaps/basemaps), and in that folder is the license from that repository. In the protomaps folder is also a selection of sprites taken from [basemaps-assets cdn](https://protomaps.github.io/basemaps-assets/), in the sprites folder is the license from the [Tangrams/icons repository](https://github.com/tangrams/icons/blob/master/LICENSE.md). In addition, the maplibre-gl.css, and maplibre-gl.js files (/pages/assets/maplibre-gl/) are taken from the following urls: [js file](https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js), [css file](https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css). The license from [Maplibre-gl's repository](https://github.com/maplibre/maplibre-gl-js) is included in that folder.
 
 ## Font License attribution
 
-The font used for this site was [Piazolla](https://github.com/huertatipografica/piazzolla). In the fonts folder (/pages/assets/fonts/OFL.txt) is included the Open Fonts License for this font.
+The font used for this site was [Piazolla](https://github.com/huertatipografica/piazzolla). In the fonts folder (/pages/assets/fonts/OFL.txt) is included the Open Fonts License for this font, across both the font and its associated glyphs (/pages/assets/fonts/glyphs).
 
 ## Development
 
