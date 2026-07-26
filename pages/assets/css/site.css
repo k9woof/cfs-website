@@ -102,9 +102,6 @@ hr {
 }
 
 @media (max-width: 768px) {
-  html {
-    background-color: #2b2320;
-  }
   .main {
     padding: 0.5rem;
   }
