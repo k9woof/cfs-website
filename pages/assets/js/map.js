@@ -9,7 +9,7 @@ const map = new maplibregl.Map({
     glyphs:
       "https://craigellachiefillingstation.co.uk/assets/fonts/glyphs/{fontstack}/{range}.pbf",
     sprite:
-      "https://craigellachiefillingstation/assets/protomaps/sprites/light",
+      "https://craigellachiefillingstation.co.uk/assets/protomaps/sprites/light",
     sources: {
       basemap: {
         type: "vector",

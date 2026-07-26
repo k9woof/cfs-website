@@ -1087,7 +1087,7 @@
         "text-font": {
           type: "array",
           value: "string",
-          default: ["Open Sans Regular", "Arial Unicode MS Regular"],
+          default: ["Piazolla Regular"],
           requires: ["text-field"],
           expression: { interpolated: !1, parameters: ["zoom", "feature"] },
           "property-type": "data-driven",
