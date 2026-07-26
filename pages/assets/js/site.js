@@ -1,4 +1,4 @@
-// fuel/ev scripts
+// fuel/ev getters
 
 // fuel price
 async function getFuelPrice() {
@@ -14,7 +14,7 @@ async function getFuelPrice() {
       return;
     }
 
-    // get prices, update
+    // extract prices, update
     const unleaded = fuel_prices[0].price;
     const diesel = fuel_prices[1].price;
     petrolElement.innerHTML = `${JSON.stringify(unleaded)}p per litre`;
@@ -30,12 +30,15 @@ async function getEVAvailabilityTarriff() {
   const tarriffElement = document.getElementById("tariff");
   const availabilityElement = document.getElementById("availability");
   try {
+    // fetch ev tariff/availability
     const res = await fetch("api/ev-charging");
     if (!res.ok) {
       tarriffElement.textContent("Tarriff information not available");
       availabilityElement.textContent("Availability data not available");
       return;
     }
+
+    // extract data, update elements
     const tarriffAvailability = await res.json();
     const tarriff = tarriffAvailability[1][0].price_components[0].price * 1.2;
     const availability = tarriffAvailability[0][0];
