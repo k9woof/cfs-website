@@ -1,5 +1,6 @@
 // adapted from an example in https://github.com/WebDevSimplified/css-tutorials
 
+// navbar button/links
 const toggleButton = document.getElementsByClassName("toggle-button")[0];
 const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 const navbarDivider = document.getElementsByClassName("navbar-divier")[0];
@@ -8,27 +9,26 @@ const aboutLink = document.getElementsByClassName("about")[0];
 const historyLink = document.getElementsByClassName("history")[0];
 const servicesLink = document.getElementsByClassName("services")[0];
 
+// button toggles
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
   toggleButton.classList.toggle("active");
   navbarDivider.classList.toggle("active");
 });
 
+// link toggles
 homeLink.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
   toggleButton.classList.toggle("active");
 });
-
 aboutLink.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
   toggleButton.classList.toggle("active");
 });
-
 servicesLink.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
   toggleButton.classList.toggle("active");
 });
-
 historyLink.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
   toggleButton.classList.toggle("active");

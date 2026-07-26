@@ -16,6 +16,7 @@ footer ul {
 }
 
 footer a {
+  -webkit-tap-highlight-color: #2b2320;
   color: #f0e9d8;
   text-decoration: none;
 }
