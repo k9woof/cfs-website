@@ -2,6 +2,12 @@
 
 // fetches the basemap from our domain, and then places marker at our location
 const pinLocation = [-3.184139, 57.486293];
+
+const customFlavour = {
+  ...basemaps.namedFlavor("light"),
+  regular: "Piazzolla Regular",
+};
+
 const map = new maplibregl.Map({
   container: "map",
   style: {
@@ -18,7 +24,7 @@ const map = new maplibregl.Map({
           '<a href="https://protomaps.com" target="_blank" title="Protomaps website" rel="noopener">Protomaps</a> © <a href="https://openstreetmap.org" target="_blank" title="Open Street Maps website" rel="noopener">OpenStreetMap</a>',
       },
     },
-    layers: basemaps.layers("basemap", basemaps.namedFlavor("light"), {
+    layers: basemaps.layers("basemap", customFlavour, {
       lang: "en",
     }),
   },
