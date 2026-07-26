@@ -7,8 +7,9 @@ const map = new maplibregl.Map({
   style: {
     version: 8,
     glyphs:
-      "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
-    sprite: "https://protomaps.github.io/basemaps-assets/sprites/v4/light",
+      "https://craigellachiefillingstation.co.uk/assets/fonts/glyphs/{fontstack}/{range}.pbf",
+    sprite:
+      "https://craigellachiefillingstation/assets/protomaps/sprites/light",
     sources: {
       basemap: {
         type: "vector",
