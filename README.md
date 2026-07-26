@@ -20,7 +20,11 @@ The EV charger worker fetches from [ChargePlace Scotland's public API](https://c
 
 ## Map worker
 
-The worker code (map-worker/src/index.js) for the map-tile worker is taken from [this repository](https://github.com/protomaps/PMTiles/tree/main/serverless/cloudflare). In the root of the map-worker (/map-worker/LICENSE) is the license from that repository. This was created with help from the guide on [Protomap's website](https://docs.protomaps.com/deploy/cloudflare). This was done to keep the map data in house, and thus avoid transferring user data to a third party.
+The worker code (map-worker/src/index.js) for the map-tile worker is taken from [this Protomap/PMTiles repository](https://github.com/protomaps/PMTiles/tree/main/serverless/cloudflare). In the root of the map-worker (/map-worker/LICENSE) is the license from that repository. This was created with help from the guide on [Protomap's website](https://docs.protomaps.com/deploy/cloudflare). This was done to keep the map data in house, and thus avoid transferring user data to a third party.
+
+## Third-Party code notice
+
+The code used to create this interactive map on the homepage of the website uses third-party code, which is self-hosted. The basemap.js file in 'pages/assets/protomaps/basemaps.js' is taken from [this url](https://unpkg.com/@protomaps/basemaps@5.7.2/dist/basemaps.js) and is derived from the [Basemaps repository](https://github.com/protomaps/basemaps), and in that folder is the license from that repository. In addition, the maplibre-gl.css, and maplibre-gl.js files (/pages/assets/maplibre-gl/) are taken from the following urls: [js file](https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js), [css file](https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css). The license from [Maplibre-gl's repository](https://github.com/maplibre/maplibre-gl-js) is included in that folder.
 
 ## Font License attribution
 
