@@ -6,6 +6,8 @@ const pinLocation = [-3.184139, 57.486293];
 const customFlavour = {
   ...basemaps.namedFlavor("light"),
   regular: "Piazzolla Regular",
+  medium: "Piazzolla Medium",
+  italic: "Piazzolla Italic",
 };
 
 const map = new maplibregl.Map({
